@@ -1,0 +1,44 @@
+@import "normalize.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom styles */
+@layer components {
+  .text-primary-color {
+    color: #09122c;
+  }
+
+  .bg-primary-color {
+    background-color: #09122c;
+  }
+
+  .text-secondary-color {
+    color: #6439ff;
+  }
+
+  .bg-secondary-color {
+    background-color: #f9fafb;
+  }
+}
+
+.lg\:pl-10 {
+  padding-left: 4rem;
+}
+
+.grid.grid-cols-3 > div {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.grid.grid-cols-3 > .center-div {
+  background-color: #007bff;
+  color: white;
+}

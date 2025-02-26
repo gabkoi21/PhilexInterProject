@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Justice &mdash; Free Website Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Free HTML5 Website Template" />
+    <meta
+      name="keywords"
+      content="free website templates, html5, tailwindcss, responsive"
+    />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script defer src="../src/app.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+    />
+  </head>
+
+  <body class="bg-gray-100">
+    <div id="page" class="font-sans">
+      <!-- Navigation -->
+      <nav
+        id="navbar"
+        class="fixed top-0 left-0 w-full z-20 bg-white transition-all duration-500 ease-in-out shadow-none"
+      >
+        <div
+          class="container mx-auto flex justify-end items-center py-4 px-6 whitespace-nowrap"
+        >
+          <!-- Mobile Menu Button -->
+          <button class="md:hidden" id="mobile-menu-button">
+            <span
+              class="mdi mdi-menu text-black text-3xl transition-colors duration-500 ease-in-out"
+              id="menu-icon"
+            ></span>
+          </button>
+
+          <ul class="hidden md:flex space-x-3 md:space-x-6">
+            <li>
+              <a
+                href="../../src/index.html"
+                class="nav-link text-gray-800 transition-colors font-semibold duration-500 ease-in-out hover:text-blue-700"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="../../src/pages/about.html"
+                class="nav-link text-gray-800 transition-colors font-semibold duration-500 ease-in-out hover:text-blue-700"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="../../src/pages/services.html"
+                class="nav-link text-gray-800 transition-colors font-semibold duration-500 ease-in-out hover:text-blue-700"
+                >Services</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="../../src/pages/contact.html"
+                class="nav-link text-gray-800 transition-colors font-semibold duration-500 ease-in-out hover:text-blue-700"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          class="md:hidden fixed h-[calc(200vh-6rem)] inset-y-0 right-0 w-64 bg-white transform translate-x-full transition-transform duration-300"
+          id="mobile-menu"
+        >
+          <span
+            class="mdi mdi-close font-semibold cursor-pointer text-2xl absolute top-14 right-4"
+            id="close-menu"
+          ></span>
+          <ul class="flex flex-col space-y-2 px-4 pt-12 pb-4">
+            <li>
+              <a
+                href="../src/index.html"
+                class="block py-2 font-semibold text-base"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="../src/pages/about.html"
+                class="block py-2 font-semibold text-base"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="../src/pages/services.html"
+                class="block py-2 font-semibold text-base"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="../src/pages/contact.html"
+                class="block py-2 font-semibold text-base"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section
+        class="relative h-[400px] lg:h-[85vh] md:h-[390px] flex items-center text-white bg-cover bg-center"
+        style="background-image: url('../../public/asset/image/image1.jpg')"
+      >
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <!-- Animated Content -->
+        <div class="z-10 ml-10 mt-14">
+          <style>
+            @keyframes slideInLeft {
+              from {
+                transform: translateX(-100%);
+                opacity: 0;
+              }
+              to {
+                transform: translateX(0);
+                opacity: 1;
+              }
+            }
+
+            .slide-in {
+              animation: slideInLeft 1s ease-out;
+            }
+          </style>
+          <h1 class="text-5xl md:text-6xl font-bold text-white slide-in">
+            About Us
+          </h1>
+        </div>
+      </section>
+
+      <!-- About Us Detailed Section -->
+      <section>
+        <div class="p-20 mt-20">
+          <div class="flex flex-col md:flex-row lg:flex-row gap-10 items-start">
+            <!-- Image Section -->
+            <div class="w-full md:w-1/2 lg:w-1/2 flex justify-center">
+              <img
+                class="w-full md:w-[60%] lg:w-[100%] h-[400px] md:h-[400px] lg:h-[400px] object-cover rounded-tl-lg rounded-bl-lg"
+                src="../../public/image2/Ceo.jpeg"
+                alt="This is the page image"
+              />
+            </div>
+
+            <!-- Text Section -->
+            <div class="w-full md:w-1/2 lg:w-full mt-5">
+              <div class="w-full md:w-1/2 lg:w-full mt-5">
+                <h5
+                  class="capitalize font-bold text-xl md:text-3xl lg:text-4xl"
+                >
+                  Message From CEO
+                </h5>
+                <p class="mt-5">
+                  <span class="block mb-5">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Commodi tenetur, repudiandae natus animi deleniti facere
+                    illum? Officia laborum consequatur, ducimus doloremque
+                    consequuntur tempore quam cum odio quos explicabo quas
+                    molestias.
+                  </span>
+                </p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum
+                  dicta nam delectus dolorem expedita deserunt minus. Odio
+                  quibusdam fugiat distinctio, sapiente laborum ab provident
+                  animi optio doloribus at nesciunt voluptates.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="w-full py-10 bg-gray-100">
+        <!-- Section Title -->
+        <div class="text-center mt-5 md:mt-4">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800">
+            Company Overview
+          </h2>
+        </div>
+
+        <div
+          class="container mx-auto p-10 md:p-10 lg:p-20 bg-white shadow-xl rounded-lg mt-8"
+        >
+          <!-- First Block -->
+          <div class="mb-8">
+            <p class="text-black text-base leading-relaxed">
+              Phelix International Multipurpose Company was founded in 2017 and
+              officially obtained all legal documentation in 2023, marking the
+              grand opening of its office. Established by Mr. Philip Topor, the
+              company aims to create job opportunities and provide essential
+              services on a global scale. It supports government initiatives in
+              alignment with Liberian law through legal frameworks.
+            </p>
+            <p class="text-black text-base leading-relaxed mt-4">
+              The company has been accredited by key legal institutions,
+              including the Liberia Revenue Authority, Justice Ministry, Liberia
+              National Police, and the Liberia Business Registry. Phelix
+              International Multipurpose Company specializes in various sectors,
+              offering a wide range of services.
+            </p>
+          </div>
+
+          <!-- Second Block (Two Columns) -->
+          <div class="flex flex-col md:flex-row gap-8">
+            <div class="md:w-1/2">
+              <p class="text-black text-base leading-relaxed">
+                Operating both locally and internationally, Phelix International
+                Multipurpose Company upholds high standards in compliance with
+                regulatory laws. The company is built on the core values of
+                transparency, accountability, and trust, ensuring strong
+                relationships with clients and partners. As a private,
+                non-governmental organization, it remains independent and free
+                from political affiliations.
+              </p>
+            </div>
+            <div class="md:w-1/2">
+              <p class="text-black text-base leading-relaxed">
+                Phelix International Multipurpose Company respects all legal
+                business regulations in Liberia. It embraces diversity and is
+                open to partnerships with individuals and businesses of all
+                backgrounds. Located at S.D. Cooper Road, within the late Dr.
+                Wollor Topor Compound in Paynesville City, Montserrado County,
+                the company upholds an inclusive and welcoming approach,
+                recognizing and respecting all religious beliefs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Team Section -->
+      <section class="container px-4 md:px-6 lg:px-8 mt-5 md:mt-24">
+        <h3
+          class="text-center mt-8 md:mt-12 font-bold text-3xl md:text-4xl lg:text-5xl capitalize max-w-4xl mx-auto"
+        >
+          Meet Our Team
+        </h3>
+        <div
+          class="grid grid-cols-1 mt-8 py-5 px-5 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <!-- Team Member 1 -->
+          <div class="card bg-base-100 py-5 shadow-xl rounded-t-xl w-[98%]">
+            <figure class="overflow-hidden rounded-t-xl">
+              <img
+                src="../../public/image2/Ceo.jpeg"
+                alt="Philip Topor - CEO"
+                class="h-64 md:h-[398px] lg:h-[398px] w-full object-cover rounded-t-xl"
+              />
+            </figure>
+            <div class="card-body text-center mt-5">
+              <h2 class="card-title text-black">Philip Topor</h2>
+              <p class="font-medium text-lg">CEO</p>
+
+              <p class="text-gray-700">
+                As CEO, I lead the company’s strategic direction, oversee
+                operations, and drive growth through innovation and strong
+                leadership
+              </p>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="card bg-base-100 shadow-xl py-5 rounded-t-xl w-[98%]">
+            <figure class="overflow-hidden rounded-t-xl">
+              <img
+                src="../../public/image2/Gm.jpeg"
+                alt="Sarah Jane - Marketing Director"
+                class="h-64 md:h-[390px] lg:h-[390px] w-full object-cover rounded-t-xl"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title text-center mt-5">Regina B. Topor</h2>
+              <p class="font-medium text-black text-xl text-center">
+                General Manager
+              </p>
+              <p class="text-center text-gray-700">
+                In my role, I oversee daily operations, coordinate business
+                activities, ensure the company runs efficiently to achieve its
+                strategic goals
+              </p>
+            </div>
+          </div>
+          <!-- Team Member 3 -->
+          <div class="card bg-base-100 shadow-xl py-5 rounded-t-xl w-[98%]">
+            <figure class="overflow-hidden rounded-t-xl">
+              <img
+                src="../../public/asset/image/team1.jpeg"
+                alt="David Smith - Lead Developer"
+                class="h-64 md:h-[390px] lg:h-[390px] w-full object-cover rounded-t-xl"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="text-center mt-5">Sylvia Zeh</h2>
+              <p class="font-medium text-black text-lg text-center">
+                Marketing General
+              </p>
+              <p class="text-center text-black">
+                Sylvia is responsible for managing the company's marketing
+                operations, ensuring the company's marketing strategies are
+                effective and efficient.
+              </p>
+            </div>
+          </div>
+          <!-- Team Member 4 -->
+          <div class="card bg-base-100 shadow-xl py-5 rounded-t-xl w-[98%]">
+            <figure class="rounded-t-xl overflow-hidden">
+              <img
+                src="../../public/image2/account.jpeg"
+                alt="Rachel Lee - Product Manager"
+                class="h-64 md:h-[390px] lg:h-[390px] w-full object-cover"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title text-center mt-5">Z. Michael Saye</h2>
+              <p class="font-medium text-lg text-center text-black">
+                Accountant & Real Estate
+              </p>
+              <p class="text-center text-black">
+                Z. Michael is responsible for managing the company's financial
+                operations, ensuring the company's financial stability and
+                profitability.
+              </p>
+            </div>
+          </div>
+          <!-- Team Member 5 -->
+          <div class="card bg-base-100 shadow-xl py-5 rounded-t-xl w-[98%]">
+            <figure class="rounded-t-xl overflow-hidden">
+              <img
+                src="../../public/image2/Sg.jpeg"
+                alt="John Doe - Sales Lead"
+                class="h-64 md:h-[390px] lg:h-[390px] w-full object-cover rounded-t-xl"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title text-center mt-5">Rejoice D. George</h2>
+              <p class="font-medium text-lg text-center">
+                Database & Customer Care
+              </p>
+              <p class="text-center text-black">
+                Rejoice is responsible for managing the company's database and
+                ensuring the company's customer care operations are efficient
+                and effective.
+              </p>
+            </div>
+          </div>
+          <!-- Team Member 6 -->
+          <div class="card bg-base-100 shadow-xl rounded-t-xl">
+            <figure class="rounded-t-xl overflow-hidden">
+              <img
+                src="../public/image2/Security.jpeg"
+                alt="Emily Clark - Customer Success Manager"
+                class="h-64 md:h-[390px] lg:h-[390px] w-full object-cover rounded-t-xl"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title text-center">Emily Clark</h2>
+              <p class="font-medium text-lg text-center">Chief Security</p>
+              <p class="text-center text-gray-700">
+                Emily ensures our customers receive the best possible service
+                and support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div>
+      <!-- Mission & Vision Section -->
+      <section class="py-16">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-blue-600">
+              Our Mission & Vision
+            </h2>
+          </div>
+          <div class="flex flex-col md:flex-row md:space-x-8">
+            <!-- Mission -->
+            <div class="bg-white p-8 rounded-lg shadow-md flex-1 mb-8 md:mb-0">
+              <div class="flex flex-col lg:flex-row lg:space-x-8">
+                <img
+                  src="../../public/asset/image/image3.jpg"
+                  alt="Mission"
+                  class="w-full lg:w-1/2 h-[300px] object-cover rounded-lg mb-6 lg:mb-0"
+                />
+                <div>
+                  <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                    Our Mission
+                  </h3>
+                  <p class="text-gray-600">
+                    To create job opportunities and deliver quality services
+                    worldwide, ensuring legal compliance, transparency, and
+                    accountability. We support governmental agendas and adhere
+                    to the laws of Liberia and other operating regions.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Vision -->
+            <div class="bg-white p-8 rounded-lg shadow-md flex-1">
+              <div class="flex flex-col lg:flex-row lg:space-x-8">
+                <img
+                  src="../../public/asset/image/image4.jpg"
+                  alt="Vision"
+                  class="w-full lg:w-1/2 h-[300px] object-cover rounded-lg mb-6 lg:mb-0"
+                />
+                <div>
+                  <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                    Our Vision
+                  </h3>
+                  <p class="text-gray-600">
+                    To be a globally recognized company, setting industry
+                    standards through innovation, integrity, and sustainable
+                    practices, while fostering positive relationships with
+                    clients and partners.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+      <footer
+        class="text-center text-white lg:text-left mt-20 border w-full bg-black py-12"
+      >
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Social Media Section -->
+            <div class="text-center md:text-left">
+              <h6 class="font-semibold uppercase mb-4">Follow Us</h6>
+              <div class="flex justify-center md:justify-start gap-4">
+                <a
+                  href="#"
+                  class="text-white hover:text-blue-500 transition duration-300"
+                >
+                  <i class="mdi mdi-facebook text-2xl"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-white hover:text-blue-400 transition duration-300"
+                >
+                  <i class="mdi mdi-twitter text-2xl"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-white hover:text-blue-600 transition duration-300"
+                >
+                  <i class="mdi mdi-linkedin text-2xl"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-white hover:text-pink-500 transition duration-300"
+                >
+                  <i class="mdi mdi-instagram text-2xl"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Navigation Section -->
+            <div class="text-center md:text-left">
+              <h6 class="font-semibold uppercase mb-4">Navigation</h6>
+              <p class="mb-3">
+                <a
+                  href="../index.html"
+                  class="text-white hover:text-blue-500 transition duration-300"
+                  >Home</a
+                >
+              </p>
+              <p class="mb-3">
+                <a
+                  href="../src/pages/about.html"
+                  class="text-white hover:text-blue-500 transition duration-300"
+                  >About
+                </a>
+              </p>
+              <p class="mb-3">
+                <a
+                  href="#!"
+                  class="text-white hover:text-blue-500 transition duration-300"
+                  >Services</a
+                >
+              </p>
+
+              <p>
+                <a
+                  href="../src/pages/contact.html"
+                  class="text-white hover:text-blue-500 transition duration-300"
+                  >Contact</a
+                >
+              </p>
+            </div>
+
+            <!-- Services Section -->
+            <div class="text-center md:text-left">
+              <h6 class="font-semibold uppercase mb-4">Services</h6>
+              <p class="mb-3">
+                <a
+                  href="../../src/pages/index.html"
+                  class="text-white hover:text-blue-500 transition duration-300"
+                >
+                  Real Estate Management
+                </a>
+              </p>
+              <p class="mb-3">
+                <a
+                  href="#!"
+                  class="text-white hover:text-blue-500 transition duration-300"
+                >
+                  Security Guards
+                </a>
+              </p>
+              <p class="mb-3">
+                <a
+                  href="#!"
+                  class="text-white hover:text-blue-500 transition duration-300"
+                >
+                  Engineering and Consultant
+                </a>
+              </p>
+              <p class="mb-3">
+                <a
+                  href="#!"
+                  class="text-white hover:text-blue-500 transition duration-300"
+                >
+                  Vocation School
+                </a>
+              </p>
+              <p class="mb-3">
+                <a
+                  href="#!"
+                  class="text-white hover:text-blue-500 transition duration-300"
+                >
+                  Delivery
+                </a>
+              </p>
+              <p class="mb-3">
+                <a
+                  href="#!"
+                  class="text-white hover:text-blue-500 transition duration-300"
+                >
+                  Car Rental Service
+                </a>
+              </p>
+              <p>
+                <a
+                  href="#!"
+                  class="text-white hover:text-blue-500 transition duration-300"
+                >
+                  Travelling and Shipping Agency
+                </a>
+              </p>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="text-center md:text-left">
+              <h6 class="font-semibold uppercase mb-4">Contact Info</h6>
+              <p class="mb-3">Email: info@philexinternational.com</p>
+              <p class="mb-3">Phone: +231 555 123 4567</p>
+              <p class="mb-3">
+                Website:
+                <a
+                  href="https://www.philexinternational.com"
+                  class="text-white hover:text-blue-500 transition duration-300"
+                  >www.philexinternational.com</a
+                >
+              </p>
+              <p>Address: Sd Cooper Road, Monrovia, Liberia</p>
+            </div>
+          </div>
+
+          <!-- Copyright & Back to Top -->
+          <div class="mt-12 border-t border-gray-700 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+              <p class="text-gray-400 mb-4 md:mb-0">
+                &copy; 2025 Philex. All rights reserved.
+              </p>
+              <div class="bg-blue-600 px-3 rounded-md py-2">
+                <a
+                  href="#page"
+                  class="text-white hover:text-blue-500 transition duration-300"
+                >
+                  <i class="mdi mdi-arrow-up text-2xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
