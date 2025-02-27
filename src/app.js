@@ -38,24 +38,40 @@ window.addEventListener("scroll", function () {
 const mobileMenuButton = document.getElementById("mobile-menu-button");
 const mobileMenu = document.getElementById("mobile-menu");
 const closeMenuButton = document.getElementById("close-menu");
+const menuIcon = document.getElementById("menu-icon");
 
-// Initialize menu as hidden
+// Ensure menu is initially hidden
 mobileMenu.classList.add("translate-x-full");
 
 // Toggle mobile menu visibility
 mobileMenuButton.addEventListener("click", (e) => {
   e.stopPropagation();
   mobileMenu.classList.toggle("translate-x-full");
+
+  // Toggle menu icon
+  if (mobileMenu.classList.contains("translate-x-full")) {
+    menuIcon.classList.remove("mdi-close");
+    menuIcon.classList.add("mdi-menu");
+  } else {
+    menuIcon.classList.remove("mdi-menu");
+    menuIcon.classList.add("mdi-close");
+  }
 });
 
 // Close mobile menu when clicking close button
 closeMenuButton.addEventListener("click", () => {
   mobileMenu.classList.add("translate-x-full");
+  menuIcon.classList.remove("mdi-close");
+  menuIcon.classList.add("mdi-menu");
 });
 
 // Close mobile menu when clicking outside
-document.addEventListener("click", () => {
-  mobileMenu.classList.add("translate-x-full");
+document.addEventListener("click", (e) => {
+  if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+    mobileMenu.classList.add("translate-x-full");
+    menuIcon.classList.remove("mdi-close");
+    menuIcon.classList.add("mdi-menu");
+  }
 });
 
 // Prevent clicks inside the menu from closing it
@@ -63,9 +79,7 @@ mobileMenu.addEventListener("click", (e) => {
   e.stopPropagation();
 });
 
-//  This is for the hambuger menu button
-
-const menuIcon = document.getElementById("menu-icon");
+// Change menu icon color on scroll
 window.addEventListener("scroll", function () {
   if (window.scrollY > 50) {
     menuIcon.classList.remove("text-white");

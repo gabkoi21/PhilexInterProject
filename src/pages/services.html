@@ -36,7 +36,14 @@
           <div id="gtco-logo" class="text-xl font-bold">
             <img src="../public/asset/image/image2.jpg" alt="" class="w-[5%]" />
           </div>
-          <ul class="flex space-x-6">
+          <!-- Mobile Menu -->
+          <button type="button" class="md:hidden" id="mobile-menu-button">
+            <span
+              class="mdi mdi-menu text-black text-3xl transition-colors duration-500 ease-in-out"
+              id="menu-icon"
+            ></span>
+          </button>
+          <ul class="hidden md:flex space-x-3 md:space-x-6">
             <li>
               <a
                 href="../../src/index.html"
@@ -67,6 +74,47 @@
             </li>
           </ul>
         </div>
+
+        <!-- This is for mobile screen -->
+        <div
+          class="md:hidden fixed h-[calc(200vh-6rem)] inset-y-0 right-0 w-64 bg-white transform translate-x-full transition-transform duration-300"
+          id="mobile-menu"
+        >
+          <span
+            class="mdi mdi-close font-semibold cursor-pointer text-3xl absolute top-12 right-4"
+            id="close-menu"
+          ></span>
+          <ul class="flex flex-col space-y-2 px-4 pt-12 pb-4">
+            <li>
+              <a
+                href="../src/index.html"
+                class="block py-2 font-semibold text-base"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="../src/pages/about.html"
+                class="block py-2 font-semibold text-base"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="../src/pages/services.html"
+                class="block py-2 font-semibold text-base"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="../src/pages/contact.html"
+                class="block py-2 font-semibold text-base"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
       </nav>
 
       <!-- Hero Section -->
@@ -81,7 +129,7 @@
       </section>
 
       <!-- Our Services Section -->
-      <section class="container">
+      <section class="container mx-auto">
         <h3
           class="text-center mt-8 md:mt-10 font-bold text-3xl md:text-4xl capitalize"
         >
@@ -103,7 +151,7 @@
             <h4
               class="text-lg md:text-xl font-semibold text-center text-blue-600 mt-4"
             >
-              Real estate management
+              Real Estate Management
             </h4>
             <p
               class="mt-4 text-center text-sm md:text-base leading-relaxed text-black opacity-80"
@@ -113,7 +161,7 @@
             </p>
           </div>
 
-          <!-- Security Guards -->
+          <!-- Security Guards Service -->
           <div
             class="flex flex-col items-center p-4 md:p-6 bg-blue-600 shadow-lg rounded-lg"
           >
@@ -123,9 +171,9 @@
               ></i>
             </div>
             <h4
-              class="text-lg md:text-xl font-semibold text-white whitespace-nowrap pt-4"
+              class="text-base md:text-xl font-semibold text-white whitespace-nowrap pt-4"
             >
-              Security guards service
+              Security Guards Service
             </h4>
             <p
               class="mt-4 text-center text-sm md:text-base leading-relaxed text-black"
@@ -143,9 +191,9 @@
               <i class="mdi mdi-wrench text-4xl md:text-5xl text-blue-600"></i>
             </div>
             <h4
-              class="text-lg md:text-xl font-semibold text-center text-blue-600 mt-4"
+              class="text-base md:text-xl font-semibold text-center text-blue-600 mt-4"
             >
-              Engineering and Consultant
+              Engineering and Consultant Services
             </h4>
             <p
               class="mt-4 text-center text-sm md:text-base leading-relaxed text-black opacity-80"
@@ -155,7 +203,7 @@
             </p>
           </div>
 
-          <!-- Real Estate Management -->
+          <!-- Vocational School -->
           <div
             class="flex flex-col bg-white p-4 md:p-6 text-black rounded-lg shadow-lg"
           >
@@ -163,19 +211,18 @@
               <i class="mdi mdi-school text-4xl md:text-5xl text-blue-600"></i>
             </div>
             <h4
-              class="text-lg md:text-xl font-semibold text-center text-blue-600 mt-4"
+              class="text-base md:text-xl font-semibold text-center text-blue-600 mt-4"
             >
               Vocational School
             </h4>
             <p
               class="mt-4 text-center text-sm md:text-base leading-relaxed text-black opacity-80"
             >
-              We provide vocational training and education services to
-              individuals and organizations.
+              We provide vocational training and education services.
             </p>
           </div>
 
-          <!-- Security Guards Service -->
+          <!-- Micro Finance Loan -->
           <div
             class="flex flex-col items-center p-4 md:p-6 bg-blue-600 shadow-lg rounded-lg"
           >
@@ -187,7 +234,7 @@
             <h4
               class="text-lg md:text-xl font-semibold text-white whitespace-nowrap pt-4"
             >
-              Micro finance loan
+              Micro Finance Loan
             </h4>
             <p
               class="mt-4 text-center text-sm md:text-base leading-relaxed text-black"
@@ -196,23 +243,102 @@
             </p>
           </div>
 
-          <!-- Engineering and Consultant Services -->
+          <!-- Professional Land Surveys -->
           <div
             class="flex flex-col bg-white p-4 md:p-6 text-black rounded-lg shadow-lg"
           >
             <div class="flex items-center justify-center">
-              <i class="mdi mdi-map text-4xl md:text-5xl text-blue-600"></i>
+              <i
+                class="mdi mdi-map-marker-radius text-4xl md:text-5xl text-blue-600"
+              ></i>
             </div>
             <h4
-              class="text-lg md:text-xl font-semibold text-center text-blue-600 mt-4"
+              class="text-base md:text-xl font-semibold text-center text-blue-600 mt-4"
             >
-              Professional land Surveys
+              Professional Land Surveys
             </h4>
             <p
-              class="mt-4 text-center text-sm md:text-base leading-relaxed text-black"
+              class="mt-4 text-center text-sm md:text-base leading-relaxed text-black opacity-80"
             >
-              We provide professional land surveys to individuals and
-              businesses.
+              We offer professional land survey services.
+            </p>
+          </div>
+
+          <!-- Agriculture Services -->
+          <div
+            class="flex flex-col bg-white p-4 md:p-6 text-black rounded-lg shadow-lg"
+          >
+            <div class="flex items-center justify-center">
+              <i class="mdi mdi-tractor text-4xl md:text-5xl text-blue-600"></i>
+            </div>
+            <h4
+              class="text-base md:text-xl font-semibold text-center text-blue-600 mt-4"
+            >
+              Agriculture Services
+            </h4>
+            <p
+              class="mt-4 text-center text-sm md:text-base leading-relaxed text-black opacity-80"
+            >
+              We provide farm making and animal housing boundary services.
+            </p>
+          </div>
+
+          <!-- Traveling & Shipping Agency -->
+          <div
+            class="flex flex-col bg-blue-600 p-4 md:p-6 text-black rounded-lg shadow-lg"
+          >
+            <div class="flex items-center justify-center">
+              <i class="mdi mdi-ferry text-4xl md:text-5xl text-white"></i>
+            </div>
+            <h4
+              class="text-base md:text-xl font-semibold text-center text-white mt-4"
+            >
+              Traveling & Shipping Agency
+            </h4>
+            <p
+              class="mt-4 text-center text-sm md:text-base leading-relaxed text-black opacity-80"
+            >
+              We facilitate travel and shipping logistics.
+            </p>
+          </div>
+
+          <!-- Maintenance & Sanitation Services -->
+          <div
+            class="flex flex-col bg-white p-4 md:p-6 text-black rounded-lg shadow-lg"
+          >
+            <div class="flex items-center justify-center">
+              <i class="mdi mdi-broom text-4xl md:text-5xl text-blue-600"></i>
+            </div>
+            <h4
+              class="text-base md:text-xl font-semibold text-center text-blue-600 mt-4"
+            >
+              Maintenance & Sanitation Services
+            </h4>
+            <p
+              class="mt-4 text-center text-sm md:text-base leading-relaxed text-black opacity-80"
+            >
+              Cleaning and maintenance services for businesses and homes.
+            </p>
+          </div>
+
+          <!-- Co-working & Conference Hall Rental -->
+          <div
+            class="flex flex-col bg-white p-4 md:p-6 text-black rounded-lg shadow-lg"
+          >
+            <div class="flex items-center justify-center">
+              <i
+                class="mdi mdi-office-building text-4xl md:text-5xl text-blue-600"
+              ></i>
+            </div>
+            <h4
+              class="text-base md:text-xl font-semibold text-center text-blue-600 mt-4"
+            >
+              Co-working & Conference Hall
+            </h4>
+            <p
+              class="mt-4 text-center text-sm md:text-base leading-relaxed text-black opacity-80"
+            >
+              Furnished office space and conference halls for rent.
             </p>
           </div>
         </div>

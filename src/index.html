@@ -3,23 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Justice &mdash; Free Website Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Philex International</title>
     <meta name="description" content="Free HTML5 Website Template" />
-    <meta
-      name="keywords"
-      content="free website templates, html5, tailwindcss, responsive"
-    />
-    <meta name="author" content="FreeHTML5.co" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="../src/app.js"></script>
 
-    <!-- Modernizr JS -->
-    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- External Stylesheets and Scripts -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="../src/app.js"></script>
   </head>
 
   <body>
@@ -125,8 +119,11 @@
 
         <!-- Hero Section -->
         <section
-          class="relative h-[370px] md:h-[520px] lg:h-[85vh] flex items-center justify-center text-center text-white bg-cover bg-center bg-no-repeat"
-          style="background-image: url('../public/image2/HeroImage.jpeg')"
+          class="relative h-[370px] md:h-[520px] lg:h-[100vh] xl:h-[100vh] flex items-center justify-center text-center text-white bg-cover bg-center bg-no-repeat"
+          style="
+            background-image: url('../public/image2/HeroImage.jpeg');
+            background-position: center center;
+          "
         >
           <!-- Dark Overlay -->
           <div class="absolute inset-0 bg-black bg-opacity-60"></div>
@@ -220,7 +217,7 @@
           </section>
 
           <!-- Our Services Section -->
-          <section class="container 2xl:mx-auto mt-20">
+          <section class="container mx-auto mt-20">
             <h3
               class="text-center mt-8 md:mt-28 font-bold text-3xl md:text-4xl capitalize text-gray-950"
             >
@@ -330,71 +327,75 @@
               </div>
             </div>
           </section>
-
           <!-- Why Choose Philex Section -->
-          <section
-            class="container mx-auto px-4 md:px-6 lg:px-8 mt-5 md:mt-20 lg:mt-20"
-          >
+          <section class="container mx-auto px-4 md:px-6 lg:px-8 mt-5 md:mt-20">
             <h4
               class="text-4xl font-bold text-center mt-14 mb-10 text-gray-950"
             >
               Why Choose Philex
             </h4>
-            <hr class="border-blue-600 border-2 mx-auto md:w-1/12 w-[20%]" />
-            <div
-              class="flex flex-col md:flex-col lg:flex-row gap-3 md:gap-5 lg:gap-5 2xl:gap-1 mt-10"
-            >
-              <div class="w-full lg:mb-0">
+            <hr class="border-blue-600 border-2 mx-auto w-1/5 md:w-1/12" />
+
+            <div class="flex flex-col lg:flex-row gap-6 mt-10">
+              <!-- Image Section -->
+              <div class="w-full lg:w-1/2">
                 <img
-                  class="w-full md:mx-auto md:w-full lg:w-[98%] h-[350px] md:h-[550px] lg:h-[550px] 2xl:h-[550px] 2xl:w-[90%] object-cover rounded-md"
-                  src="../public/asset/image/image4.jpg "
-                  alt="This is the page image"
+                  class="w-full h-[400px] object-cover rounded-md"
+                  src="../public/asset/image/image4.jpg"
+                  alt="Why Choose Philex"
                 />
               </div>
 
-              <div class="w-full mt-5">
-                <div class="flex items-center gap-2">
-                  <span class="mdi mdi-account-group"></span>
-                  <p class="capitalize text-2xl font-semibold text-gray-950">
-                    We are Professional
+              <!-- Text Content -->
+              <div class="w-full lg:w-1/2 space-y-8 px-2 sm:px-0">
+                <!-- Professional Section -->
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="mdi mdi-account-group text-3xl text-blue-600"
+                    ></span>
+                    <p class="text-2xl font-semibold text-gray-950">
+                      We Are Professional
+                    </p>
+                  </div>
+                  <p class="text-base text-gray-700 mt-2">
+                    We are a team of experienced and skilled professionals with
+                    a passion for building and maintaining strong relationships
+                    with our clients.
                   </p>
                 </div>
-                <p class="text-base leading-relaxed mt-2 mb-10 text-gray-700">
-                  We are a team of experienced and skilled professionals with a
-                  passion for building and maintaining strong relationships with
-                  our clients.
-                </p>
 
-                <div class="flex items-center gap-2 mt-10">
-                  <span class="mdi mdi-tools"></span>
-                  <p class="capitalize text-2xl font-semibold text-gray-950">
-                    We Are Creative
+                <!-- Creative Section -->
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="mdi mdi-tools text-3xl text-blue-600"></span>
+                    <p class="text-2xl font-semibold text-gray-950">
+                      We Are Creative
+                    </p>
+                  </div>
+                  <p class="text-base text-gray-700 mt-2">
+                    With so many factors to consider when deciding how to
+                    characterize your company, wouldn’t it be great to have a
+                    team of forward-thinking, well-informed individuals who know
+                    what they’re doing?
                   </p>
                 </div>
-                <p
-                  class="text-black text-base leading-relaxed mt-2 text-gray-700"
-                >
-                  With so many factors to consider when deciding how to
-                  characterize your company, wouldn’t it be great to have a
-                  group of forward-thinking, well-informed individuals on board
-                  who know what they’re doing?
-                </p>
 
-                <div class="flex items-center gap-2 mt-10">
-                  <span
-                    class="mdi mdi-clock-outline text-3xl md:text-4xl text-black"
-                  ></span>
-                  <p class="capitalize text-2xl font-semibold text-gray-950">
-                    24/7 Great Support
+                <!-- Support Section -->
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="mdi mdi-clock-outline text-3xl text-blue-600"
+                    ></span>
+                    <p class="text-2xl font-semibold text-gray-950">
+                      24/7 Great Support
+                    </p>
+                  </div>
+                  <p class="text-base text-gray-700 mt-2">
+                    Our support team is always available to help you with any
+                    issues or concerns you may have.
                   </p>
                 </div>
-                <p
-                  class="text-black text-base leading-relaxed mt-2 text-gray-700"
-                >
-                  We are always available to help you with any issues or
-                  concerns you may have, our support team is always there to
-                  help.
-                </p>
               </div>
             </div>
           </section>
@@ -420,145 +421,149 @@
               </a>
             </div>
           </section>
-
           <!-- Our Team Section -->
-          <section class="container w-full mx-auto px-4 md:px-6 lg:px-8 mt-5">
+          <section class="container w-full mx-auto md:px-0 lg:px-8 mt-5">
             <h3
-              class="text-center mt-20 md:mt-12 font-bold text-3xl md:text-4xl lg:text-5xl capitalize mx-auto text-gray-950"
+              class="text-center mt-20 md:mt-12 font-bold text-2xl md:text-4xl lg:text-5xl capitalize mx-auto text-gray-950"
             >
               Meet Our Team
-              <hr class="border-blue-600 border-2 md:mt-5 mx-auto w-1/12" />
+              <hr
+                class="border-blue-600 border-2 mt-3 md:mt-5 mx-auto md:w-1/12 w-[10%]"
+              />
             </h3>
 
             <div
               class="grid grid-cols-1 mt-2 md:mt-5 py-5 px-5 md:grid-cols-2 lg:grid-cols-3 gap-6"
             >
               <!-- Team Member 1 -->
-              <div class="card bg-base-100 py-5 shadow-xl rounded-t-xl w-[98%]">
+              <div
+                class="card bg-base-100 shadow-xl py-5 rounded-t-xl w-[98%] h-[570px]"
+              >
                 <figure class="overflow-hidden rounded-t-xl">
                   <img
                     src="../public/image2/Ceo.jpeg"
                     alt="Philip Topor - CEO"
-                    class="h-88 md:h-[398px] lg:h-[398px 2xl:h-[488px] w-full object-cover rounded-t-xl"
+                    class="h-[400px] w-full object-cover rounded-t-xl"
                   />
                 </figure>
-                <div class="card-body text-center mt-5">
+                <div class="card-body text-center">
                   <h2 class="card-title text-gray-950">Philip Topor</h2>
                   <p class="font-medium text-xl md:text-lg">CEO</p>
-
                   <p class="text-gray-700">
                     As CEO, I lead the company’s strategic direction, oversee
                     operations, and drive growth through innovation and strong
-                    leadership
+                    leadership.
                   </p>
                 </div>
               </div>
 
               <!-- Team Member 2 -->
-              <div class="card bg-base-100 shadow-xl py-5 rounded-t-xl w-[98%]">
+              <div
+                class="card bg-base-100 shadow-xl py-5 rounded-t-xl w-[98%] h-[570px]"
+              >
                 <figure class="overflow-hidden rounded-t-xl">
                   <img
                     src="../public/image2/Gm.jpeg"
-                    alt="Sarah Jane - Marketing Director"
-                    class="h-88 md:h-[390px] lg:h-[390px] 2xl:h-[488px] w-full object-cover rounded-t-xl"
+                    alt="Regina B. Topor - General Manager"
+                    class="h-[400px] w-full object-cover rounded-t-xl"
                   />
                 </figure>
-                <div class="card-body">
-                  <h2 class="card-title text-center mt-5 text-gray-950">
-                    Regina B. Topor
-                  </h2>
-                  <p class="font-medium text-gray-950 text-xl text-center">
-                    General Manager
-                  </p>
-                  <p class="text-center text-gray-700">
-                    In my role, I oversee daily operations, coordinate business
-                    activities, ensure the company runs efficiently to achieve
-                    its strategic goals
+                <div class="card-body text-center">
+                  <h2 class="card-title text-gray-950">Regina B. Topor</h2>
+                  <p class="font-medium text-xl md:text-lg">General Manager</p>
+                  <p class="text-gray-700">
+                    I oversee daily operations, coordinate business activities,
+                    and ensure the company runs efficiently to achieve its
+                    strategic goals.
                   </p>
                 </div>
               </div>
+
               <!-- Team Member 3 -->
-              <div class="card bg-base-100 shadow-xl py-5 rounded-t-xl w-[98%]">
+              <div
+                class="card bg-base-100 shadow-xl py-5 rounded-t-xl w-[98%] h-[570px]"
+              >
                 <figure class="overflow-hidden rounded-t-xl">
                   <img
-                    src="../public/asset/image/team1.jpeg"
-                    alt="David Smith - Lead Developer"
-                    class="h-88 md:h-[390px] lg:h-[390px] 2xl:h-[488px] w-full object-cover rounded-t-xl"
+                    src="../public/image2/marketGen.jpeg"
+                    alt="Sylvia Zeh - Marketing General"
+                    class="h-[400px] w-full object-cover rounded-t-xl"
                   />
                 </figure>
-                <div class="card-body">
-                  <h2 class="text-center mt-5 text-gray-950">Sylvia Zeh</h2>
-                  <p class="font-medium text-black text-lg text-center">
+                <div class="card-body text-center">
+                  <h2 class="card-title text-gray-950">Sylvia Zeh</h2>
+                  <p class="font-medium text-xl md:text-lg">
                     Marketing General
                   </p>
-                  <p class="text-cente text-gray-700">
+                  <p class="text-gray-700">
                     Sylvia is responsible for managing the company's marketing
-                    operations, ensuring the company's marketing strategies are
-                    effective and efficient.
+                    operations, ensuring its marketing strategies are effective
+                    and efficient.
                   </p>
                 </div>
               </div>
+
               <!-- Team Member 4 -->
-              <div class="card bg-base-100 shadow-xl py-5 rounded-t-xl w-[98%]">
-                <figure class="rounded-t-xl overflow-hidden">
+              <div
+                class="card bg-base-100 shadow-xl py-5 rounded-t-xl w-[98%] h-[570px]"
+              >
+                <figure class="overflow-hidden rounded-t-xl">
                   <img
                     src="../public/image2/account.jpeg"
-                    alt="Rachel Lee - Product Manager"
-                    class="h-88 md:h-[390px] lg:h-[390px] 2xl:h-[488px] w-full object-cover"
+                    alt="Z. Michael Saye - Accountant & Real Estate"
+                    class="h-[400px] w-full object-cover rounded-t-xl"
                   />
                 </figure>
-                <div class="card-body">
-                  <h2 class="card-title text-center mt-5 text-gray-950">
-                    Z. Michael Saye
-                  </h2>
-                  <p class="font-medium text-lg text-center text-black">
+                <div class="card-body text-center">
+                  <h2 class="card-title text-gray-950">Z. Michael Saye</h2>
+                  <p class="font-medium text-xl md:text-lg">
                     Accountant & Real Estate
                   </p>
-                  <p class="text-center text-gray-700">
+                  <p class="text-gray-700">
                     Z. Michael is responsible for managing the company's
-                    financial operations, ensuring the company's financial
-                    stability and profitability.
+                    financial operations, ensuring stability and profitability.
                   </p>
                 </div>
               </div>
+
               <!-- Team Member 5 -->
-              <div class="card bg-base-100 shadow-xl py-5 rounded-t-xl w-[98%]">
-                <figure class="rounded-t-xl overflow-hidden">
+              <div
+                class="card bg-base-100 shadow-xl py-5 rounded-t-xl w-[98%] h-[570px]"
+              >
+                <figure class="overflow-hidden rounded-t-xl">
                   <img
-                    src="../public/image2/Sg.jpeg"
-                    alt="John Doe - Sales Lead"
-                    class="h-88 md:h-[390px] lg:h-[390px] 2xl:h-[488px] w-full object-cover rounded-t-xl"
+                    src="../public/image2/customercare.jpeg"
+                    alt="Rejoice D. George - Database & Customer Care"
+                    class="h-[400px] w-full object-cover rounded-t-xl"
                   />
                 </figure>
-                <div class="card-body">
-                  <h2 class="card-title text-center mt-5 text-gray-950">
-                    Rejoice D. George
-                  </h2>
-                  <p class="font-medium text-lg text-center">
+                <div class="card-body text-center">
+                  <h2 class="card-title text-gray-950">Rejoice D. George</h2>
+                  <p class="font-medium text-xl md:text-lg">
                     Database & Customer Care
                   </p>
-                  <p class="text-center text-gray-700">
-                    Rejoice is responsible for managing the company's database
-                    and ensuring the company's customer care operations are
-                    efficient and effective.
+                  <p class="text-gray-700">
+                    Rejoice manages the company's database and ensures customer
+                    care operations are efficient and effective.
                   </p>
                 </div>
               </div>
+
               <!-- Team Member 6 -->
-              <div class="card bg-base-100 shadow-xl rounded-t-xl">
-                <figure class="rounded-t-xl overflow-hidden">
+              <div
+                class="card bg-base-100 shadow-xl py-5 rounded-t-xl w-[98%] h-[570px]"
+              >
+                <figure class="overflow-hidden rounded-t-xl">
                   <img
                     src="../public/asset/image/image4.jpg"
-                    alt="Emily Clark - Customer Success Manager"
-                    class="h-88 md:h-[390px] lg:h-[390px] 2xl:h-[488px] w-full object-cover rounded-t-xl"
+                    alt="Emily Clark - Chief Security"
+                    class="h-[400px] w-full object-cover rounded-t-xl"
                   />
                 </figure>
-                <div class="card-body">
-                  <h2 class="card-title text-center text-gray-950">
-                    Emily Clark
-                  </h2>
-                  <p class="font-medium text-lg text-center">Chief Security</p>
-                  <p class="text-center text-gray-700">
+                <div class="card-body text-center mt-5">
+                  <h2 class="card-title text-gray-950">Emily Clark</h2>
+                  <p class="font-medium text-xl md:text-lg">Chief Security</p>
+                  <p class="text-gray-700">
                     Emily ensures our customers receive the best possible
                     service and support.
                   </p>
