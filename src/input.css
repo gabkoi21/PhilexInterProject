@@ -5,17 +5,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Apply Global Font */
 body {
-  font-family: "Roboto", sans-serif;
+  @apply font-roboto;
 }
 
-/* Custom styles */
+/* Custom Styles */
 @layer components {
   .text-primary-color {
     color: #09122c;
@@ -34,17 +36,8 @@ body {
   }
 }
 
-.lg\:pl-10 {
-  padding-left: 4rem;
-}
-
-.grid.grid-cols-3 > div {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.grid.grid-cols-3 > .center-div {
-  background-color: #007bff;
-  color: white;
+/* Active Navigation Link */
+.nav-link.active {
+  color: #1d4ed8; /* Tailwind blue-600 */
+  font-weight: 600;
 }
