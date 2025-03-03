@@ -32,14 +32,14 @@
             />
           </div>
           <!-- Mobile Menu Button -->
-          <button class="md:hidden" id="mobile-menu-button">
+          <button class="lg:hidden" id="mobile-menu-button">
             <span
               class="mdi mdi-menu text-3xl text-black transition-colors duration-500 ease-in-out"
               id="menu-icon"
             ></span>
           </button>
 
-          <ul class="hidden space-x-3 md:flex md:space-x-6">
+          <ul class="hidden space-x-3 md:hidden md:space-x-6 lg:flex">
             <li>
               <a
                 href="../../src/index.html"
@@ -83,7 +83,7 @@
 
         <!-- Mobile Menu -->
         <div
-          class="fixed inset-y-0 right-0 h-[calc(200vh-6rem)] w-64 translate-x-full transform bg-white transition-transform duration-300 md:hidden"
+          class="fixed inset-y-0 right-0 h-[calc(200vh-6rem)] w-64 translate-x-full transform bg-white transition-transform duration-300"
           id="mobile-menu"
         >
           <span
@@ -134,7 +134,7 @@
       <!-- background-image image  -->
 
       <section
-        class="relative flex h-[370px] items-center justify-center bg-cover bg-center bg-no-repeat text-center text-white md:h-[500px] lg:h-[400px]"
+        class="relative flex h-[370px] items-center justify-center bg-cover bg-center bg-no-repeat text-center text-white md:h-[500px] lg:h-[600px]"
         style="background-image: url('../../public/asset/image/abouthero.jpeg')"
       >
         <div class="absolute inset-0 bg-black/55"></div>
@@ -144,29 +144,36 @@
       </section>
 
       <!-- Why Choose Philex Section -->
-      <section class="container mx-auto mt-5 px-4 md:mt-10 md:px-10 lg:px-20">
+      <section
+        class="container mx-auto mt-5 px-4 md:mt-10 md:px-10 lg:mt-20 lg:px-20"
+      >
         <!-- Heading -->
-        <h4
-          class="mt-10 text-center text-lg font-bold text-gray-950 md:text-2xl"
-        >
-          Things You Should Know <br />
-          About Philex
-        </h4>
-        <hr class="mx-auto mt-4 w-1/5 border-2 border-blue-600 md:w-1/12" />
+        <div class="space-y-4 text-center">
+          <h4
+            class="mt-10 text-2xl font-bold text-gray-950 md:text-3xl lg:text-4xl"
+          >
+            Things You Should Know About Philex
+          </h4>
+          <p class="mx-auto max-w-2xl text-sm text-gray-600 md:text-base">
+            Your trusted partner in comprehensive business solutions since 2017
+          </p>
+          <hr class="mx-auto w-24 border-2 border-blue-600" />
+        </div>
 
         <!-- Content Container -->
         <div class="mt-10 flex flex-col items-start gap-5 lg:flex-row">
           <!-- Image Section -->
 
-          <div class="h-auto w-full object-cover lg:w-[50%]">
+          <div class="w-full object-cover lg:w-[50%]">
             <img
               src="../../public/asset/image/image4.jpg"
               alt="Why Choose Philex"
+              class="h-[300px] w-full rounded-none object-cover md:rounded-b-xl md:rounded-t-xl lg:h-[500px]"
             />
           </div>
 
           <!-- Text Content -->
-          <div class="w-full space-y-5 lg:w-1/2">
+          <div class="mt-5 w-full space-y-5 lg:w-1/2">
             <p class="text-justify text-sm text-gray-950">
               Phelix International Multipurpose Company was founded in 2017 and
               officially obtained all legal documentation in 2023, marking the
@@ -194,29 +201,29 @@
       <!-- Our Services Section -->
       <section class="container mx-auto mt-10">
         <h3
-          class="mt-8 text-center text-2xl font-bold capitalize text-gray-950 md:mt-10 md:text-2xl lg:text-3xl"
+          class="mt-8 text-center text-2xl font-bold capitalize text-gray-950 md:mt-10 md:text-2xl lg:mt-20 lg:text-3xl"
         >
           Our Services
         </h3>
 
         <div
-          class="mb-10 grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 md:gap-6 md:p-6 lg:gap-10 lg:p-10"
+          class="mb-10 grid grid-cols-1 gap-4 p-4 px-5 sm:grid-cols-2 md:mt-10 md:grid-cols-3 md:gap-6 md:p-6 lg:gap-10 lg:p-10"
         >
           <!-- Real Estate Management -->
           <div
-            class="flex h-[200px] flex-col rounded-lg bg-white p-4 text-black shadow-lg md:p-4 lg:p-3"
+            class="flex min-h-[200px] flex-col rounded-lg bg-white p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
           >
             <span
               class="mdi mdi-home-map-marker text-center text-xl text-blue-600 md:text-4xl"
             ></span>
 
             <h4
-              class="text-center text-lg font-semibold text-gray-950 md:text-lg"
+              class="text-center text-lg font-semibold text-gray-950 md:text-base lg:mt-5 lg:text-lg"
             >
               Real estate management
             </h4>
             <p
-              class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm"
+              class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
             >
               Buy and sell estates. We manage properties, including selling
               buildings, buying land, and more.
@@ -225,18 +232,18 @@
 
           <!-- Security Guards Service -->
           <div
-            class="flex h-[200px] flex-col items-center rounded-lg bg-blue-600 p-4 shadow-lg md:p-6"
+            class="flex min-h-[200px] flex-col rounded-lg bg-blue-700 p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
           >
             <span
-              class="mdi mdi-shield-account text-center text-4xl text-white md:text-4xl"
+              class="mdi mdi-shield-account text-center text-xl text-white md:text-4xl"
             ></span>
             <h4
-              class="whitespace-nowrap text-lg font-semibold text-white md:text-lg"
+              class="whitespace-nowrap text-center text-lg font-semibold text-white md:mt-5 md:text-base lg:text-lg"
             >
               Security guards service
             </h4>
             <p
-              class="mt-2 text-center text-sm leading-relaxed text-white md:text-sm"
+              class="mt-2 text-center text-sm leading-relaxed text-white md:text-sm lg:text-base"
             >
               24/7 protection services for companies, homes, business areas, and
               transportation.
@@ -245,18 +252,18 @@
 
           <!-- Engineering and Consultant Services -->
           <div
-            class="flex h-[200px] flex-col rounded-lg bg-white p-4 text-black shadow-lg md:p-6"
+            class="flex min-h-[200px] flex-col rounded-lg bg-white p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
           >
             <span
-              class="mdi mdi-wrench text-center text-4xl text-blue-600 md:text-4xl"
+              class="mdi mdi-wrench text-center text-xl text-blue-600 md:text-4xl"
             ></span>
             <h4
-              class="mt-1 text-center text-lg font-semibold text-gray-950 md:text-lg"
+              class="mt-1 text-center text-lg font-semibold text-gray-950 md:-ml-4 md:whitespace-nowrap md:text-base lg:-ml-0 lg:mt-5 lg:text-lg"
             >
               Engineering and Consultant
             </h4>
             <p
-              class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm"
+              class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
             >
               We provide construction services for buildings, drainage, bridges,
               and more.
@@ -264,10 +271,11 @@
           </div>
         </div>
       </section>
+
       <!-- Our Team Section -->
       <section class="container mx-auto mt-5 w-full md:px-0 lg:px-8">
         <h3
-          class="mt-10 text-center text-lg font-bold text-gray-950 md:text-lg"
+          class="mt-8 text-center text-2xl font-bold capitalize text-gray-950 md:mt-10 md:text-2xl lg:mt-20 lg:text-3xl"
         >
           Meet Our Team
           <hr
@@ -281,7 +289,7 @@
           <!-- Team Member 1 -->
           <div class="card bg-base-100 rounded-t-xl py-5">
             <div
-              class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover"
+              class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover lg:h-[300px] xl:h-[400px] 2xl:h-[450px]"
             >
               <img
                 src="../../public/image2/Ceo.jpeg"
@@ -294,7 +302,9 @@
                 Philip Topor
               </h2>
               <p class="text-sm">CEO</p>
-              <p class="mt-2 text-sm font-semibold text-gray-950 md:text-sm">
+              <p
+                class="mt-2 text-left text-sm font-semibold text-gray-950 md:text-sm"
+              >
                 As CEO, I lead the company’s strategic direction, oversee
                 operations, and drive growth through innovation and strong
                 leadership.
@@ -305,7 +315,7 @@
           <!-- Team Member 2 -->
           <div class="card bg-base-100 rounded-t-xl py-5">
             <div
-              class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover"
+              class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover lg:h-[300px] xl:h-[400px] 2xl:h-[450px]"
             >
               <img
                 src="../../public/image2/Gm.jpeg"
@@ -317,7 +327,9 @@
                 Regina B. Topor
               </h2>
               <p class="text-base">General Manager</p>
-              <p class="mt-2 text-sm font-semibold text-gray-950 md:text-sm">
+              <p
+                class="mt-2 text-left text-sm font-semibold text-gray-950 md:text-sm"
+              >
                 I oversee daily operations, coordinate business activities, and
                 ensure the company runs efficiently to achieve its strategic
                 goals.
@@ -328,7 +340,7 @@
           <!-- Team Member 3 -->
           <div class="card bg-base-100 rounded-t-xl py-5">
             <div
-              class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover"
+              class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover lg:h-[300px] xl:h-[400px] 2xl:h-[450px]"
             >
               <img
                 src="../../public/image2/marketGen.jpeg"
@@ -340,7 +352,9 @@
                 Sylvia Zeh
               </h2>
               <p class="text-base">Marketing General</p>
-              <p class="mt-2 text-sm font-semibold text-gray-950 md:text-sm">
+              <p
+                class="mt-2 text-left text-sm font-semibold text-gray-950 md:text-sm"
+              >
                 Sylvia is responsible for managing the company's marketing
                 operations, ensuring its marketing strategies are effective and
                 efficient.
@@ -351,7 +365,7 @@
           <!-- Team Member 3 -->
           <div class="card bg-base-100 rounded-t-xl py-5">
             <div
-              class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover"
+              class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover lg:h-[300px] xl:h-[400px] 2xl:h-[450px]"
             >
               <img
                 src="/public/image2/account.jpeg"
@@ -363,7 +377,9 @@
                 Z. Michael Saye
               </h2>
               <p class="text-base">Accountant & Real Estate</p>
-              <p class="mt-2 text-sm font-semibold text-gray-950 md:text-sm">
+              <p
+                class="mt-2 text-left text-sm font-semibold text-gray-950 md:text-sm"
+              >
                 Z. Michael is responsible for managing the company's financial
                 operations, ensuring stability and profitability.
               </p>
@@ -374,7 +390,7 @@
 
           <div class="card bg-base-100 py-5">
             <div
-              class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover"
+              class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover lg:h-[300px] xl:h-[400px] 2xl:h-[450px]"
             >
               <img
                 src="../../public/image2/customercare.jpeg"
@@ -386,7 +402,7 @@
                 Rejoice D. George
               </h2>
               <p class="text-base">Database & Customer Care</p>
-              <p class="mt-2 text-sm text-gray-950">
+              <p class="mt-2 text-left text-sm font-semibold text-gray-950">
                 Rejoice manages the company's database and ensures customer care
                 operations are efficient and effective.
               </p>
@@ -395,7 +411,7 @@
 
           <div class="card bg-base-100 py-5">
             <div
-              class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover"
+              class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover lg:h-[300px] xl:h-[400px] 2xl:h-[450px]"
             >
               <img
                 src="../../public/asset/image/image3.jpg"
@@ -407,7 +423,7 @@
                 Emily Clark
               </h2>
               <p class="text-base">Chief Security</p>
-              <p class="mt-2 text-sm font-semibold text-gray-950">
+              <p class="mt-2 text-left text-sm font-semibold text-gray-950">
                 Emily ensures our customers receive the best possible service
                 and support.
               </p>
