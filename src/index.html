@@ -22,7 +22,7 @@
         class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-4 md:px-6"
       >
         <!-- Page logo -->
-        <div id="gtco-logo" class="h-auto w-[40px] text-xl font-bold md:w-[5%]">
+        <div id="gtco-logo" class="h-auto w-[40px] text-xl font-bold md:w-[4%]">
           <img src="../public/asset/image/image2.jpg" alt="" />
         </div>
 
@@ -130,17 +130,15 @@
     ></div>
 
     <!-- Background Image Slider -->
-    <section class="relative h-[370px] md:h-[500px] lg:h-[600px]">
+    <section class="relative">
       <!-- Carousel -->
       <div
         id="background-carousel"
-        class="relative w-full"
+        class="relative h-[370px] w-full md:h-[500px] lg:h-[600px] xl:h-[650px] 2xl:h-[950px]"
         data-carousel="slide"
       >
         <!-- Carousel wrapper -->
-        <div
-          class="relative h-[370px] overflow-hidden md:h-[500px] lg:h-[600px]"
-        >
+        <div class="relative h-full overflow-hidden">
           <!-- Item 1 -->
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
             <!-- Hero Image -->
@@ -151,15 +149,14 @@
             />
             <!-- Dark Overlay -->
             <div class="absolute inset-0 bg-black/55"></div>
-
-            <!-- Centered Text Content -->
             <div
-              class="absolute inset-0 flex items-center justify-center text-center text-white"
+              class="absolute inset-0 flex items-center justify-center text-center text-white md:-mt-20"
             >
               <h1
-                class="text-center font-roboto text-xl font-bold capitalize leading-snug md:text-3xl md:leading-tight lg:text-6xl"
+                class="text-center font-roboto text-xl font-bold capitalize leading-snug md:text-3xl md:leading-tight lg:text-5xl"
               >
-                Welcome <br />to Philex International
+                <span>Welcome </span>
+                <br />to Philex International
               </h1>
             </div>
           </div>
@@ -175,12 +172,11 @@
             <!-- Dark Overlay -->
             <div class="absolute inset-0 bg-black/55"></div>
 
-            <!-- Centered Text Content -->
             <div
-              class="absolute inset-0 flex items-center justify-center text-center text-white"
+              class="absolute inset-0 flex items-center justify-center text-center text-white md:-mt-20"
             >
               <h1
-                class="font-roboto text-xl font-bold capitalize leading-snug md:text-3xl md:leading-tight lg:text-6xl"
+                class="font-roboto text-xl font-bold capitalize leading-snug md:text-3xl md:leading-tight lg:text-5xl"
               >
                 Empowering Businesses with <br />
                 Innovation and Excellence
@@ -198,13 +194,11 @@
             />
             <!-- Dark Overlay -->
             <div class="absolute inset-0 bg-black/55"></div>
-
-            <!-- Centered Text Content -->
             <div
-              class="absolute inset-0 flex items-center justify-center text-center text-white"
+              class="absolute inset-0 flex items-center justify-center text-center text-white md:-mt-20"
             >
               <h1
-                class="font-roboto text-xl font-bold capitalize leading-snug md:text-3xl md:leading-tight lg:text-6xl"
+                class="font-roboto text-xl font-bold capitalize leading-snug md:text-3xl md:leading-tight lg:text-5xl"
               >
                 Your Trusted Partner in <br />
                 Multipurpose Solutions
@@ -216,7 +210,9 @@
     </section>
 
     <!-- Welcome Section -->
-    <section class="container mx-auto mt-10 px-4 md:mt-20 md:px-6 lg:px-8">
+    <section
+      class="container mx-auto mt-10 px-4 md:mt-20 md:px-6 lg:px-8 2xl:mt-96"
+    >
       <div class="text-center">
         <h3
           class="text-lg font-bold capitalize text-gray-950 md:text-2xl lg:text-3xl"
@@ -318,57 +314,60 @@
           <span
             class="mdi mdi-home-map-marker text-center text-xl text-blue-600 md:text-4xl"
           ></span>
-
           <h4
             class="text-center text-lg font-semibold text-gray-950 md:text-base lg:mt-5 lg:text-lg"
           >
-            Real estate management
+            Real Estate Management
           </h4>
           <p
             class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
           >
-            Buy and sell estates. We manage properties, including selling
-            buildings, buying land, and more.
+            We specialize in real estate management, including hotels and
+            guesthouses. Our services cover managing empty land, property buying
+            and selling, and renting furnished office spaces and core office
+            spaces.
           </p>
         </div>
 
-        <!-- Security Guards Service -->
+        <!-- Construction Engineering and Consultancy -->
         <div
-          class="flex min-h-[200px] flex-col rounded-lg bg-blue-700 p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
+          class="flex min-h-[200px] flex-col rounded-lg bg-blue-700 p-4 py-5 shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
         >
           <span
-            class="mdi mdi-shield-account text-center text-xl text-white md:text-4xl"
+            class="mdi mdi-account-hard-hat mdi mdi-construction text-center text-xl text-white md:text-4xl"
           ></span>
+
           <h4
             class="whitespace-nowrap text-center text-lg font-semibold text-white md:mt-5 md:text-base lg:text-lg"
           >
-            Security guards service
+            Construction Engineering
           </h4>
           <p
             class="mt-2 text-center text-sm leading-relaxed text-white md:text-sm lg:text-base"
           >
-            24/7 protection services for companies, homes, business areas, and
-            transportation.
+            We construct buildings of all kinds, including roads, drainages,
+            mini bridges, and general renovations.
           </p>
         </div>
 
-        <!-- Engineering and Consultant Services -->
+        <!-- Professional Land Surveys -->
         <div
           class="flex min-h-[200px] flex-col rounded-lg bg-white p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
         >
           <span
-            class="mdi mdi-wrench text-center text-xl text-blue-600 md:text-4xl"
+            class="mdi mdi-map-marker-path text-center text-xl text-blue-600 md:text-4xl"
           ></span>
           <h4
             class="mt-1 text-center text-lg font-semibold text-gray-950 md:-ml-4 md:whitespace-nowrap md:text-base lg:-ml-0 lg:mt-5 lg:text-lg"
           >
-            Engineering and Consultant
+            Professional Land Surveys
           </h4>
           <p
             class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
           >
-            We provide construction services for buildings, drainage, bridges,
-            and more.
+            Our services include professional land surveys, land layouts,
+            prepared map deeds, GPS surveys with coordinates, Google Earth
+            mapping, total station surveys, and cadastral surveys.
           </p>
         </div>
       </div>
@@ -452,7 +451,7 @@
         </p>
         <a href="../src/pages/contact.html">
           <button
-            class="mt-5 items-center rounded bg-white px-5 py-2 text-base font-semibold text-blue-700 md:mt-5"
+            class="mt-5 items-center rounded bg-white px-5 py-2 text-base font-semibold text-blue-700 md:mt-2 lg:mt-4"
           >
             Contact us
           </button>

@@ -17,15 +17,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   </head>
 
-  <body>
-    <div id="page" class="font-sans">
+  <body id="header">
+    <div class="font-sans">
       <!-- Navigation -->
-      <nav
-        id="navbar"
-        class="fixed left-0 top-0 z-10 w-full bg-white shadow-none transition-all duration-500 ease-in-out"
-      >
+      <nav id="navbar">
         <div
           class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-4 md:px-6"
         >
@@ -40,21 +38,19 @@
           <!-- Mobile Menu Button -->
           <button class="lg:hidden" id="mobile-menu-button">
             <span
-              class="mdi mdi-menu text-3xl text-black transition-colors duration-500 ease-in-out md:text-5xl"
+              class="mdi mdi-menu text-3xl text-black duration-500 ease-in-out"
               id="menu-icon"
             ></span>
           </button>
 
-          <ul class="hidden space-x-3 md:hidden md:space-x-6 lg:flex">
+          <ul class="hidden space-x-3 md:space-x-6 lg:flex">
             <li>
               <a
                 href="../../src/index.html"
                 class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
+                >Home</a
               >
-                Home
-              </a>
             </li>
-
             <li>
               <a
                 href="../../src/pages/about.html"
@@ -69,7 +65,6 @@
                 >Services</a
               >
             </li>
-
             <li>
               <a
                 href="../../src/pages/contact.html"
@@ -79,7 +74,7 @@
             </li>
             <li>
               <a
-                href="../../src/pages/contact.html"
+                href="../../src/pages/gallery.html"
                 class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
                 >Gallery</a
               >
@@ -89,11 +84,11 @@
 
         <!-- Mobile Menu -->
         <div
-          class="fixed inset-y-0 right-0 h-[calc(200vh-6rem)] w-64 translate-x-full transform bg-white transition-transform duration-300 lg:hidden"
+          class="fixed inset-y-0 right-0 z-50 h-screen w-64 translate-x-full transform bg-white transition-transform duration-300 ease-in-out"
           id="mobile-menu"
         >
           <span
-            class="mdi mdi-close absolute right-4 top-12 cursor-pointer text-3xl font-semibold"
+            class="mdi mdi-close absolute right-4 top-4 cursor-pointer text-3xl font-semibold"
             id="close-menu"
           ></span>
           <ul class="flex flex-col space-y-2 px-4 pb-4 pt-12">
@@ -125,7 +120,6 @@
                 >Contact</a
               >
             </li>
-
             <li>
               <a
                 href="../../src/pages/gallery.html"
@@ -137,18 +131,79 @@
         </div>
       </nav>
 
-      <!-- background-image image  -->
+      <!-- Backdrop for Mobile Menu -->
+      <div
+        class="fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out"
+        id="mobile-menu-backdrop"
+        style="display: none"
+      ></div>
 
-      <section
-        class="relative flex h-[370px] items-center justify-center bg-cover bg-center bg-no-repeat text-center text-white md:h-[500px] lg:h-[600px]"
-        style="background-image: url('../../public/asset/image/abouthero.jpeg')"
-      >
-        <div class="absolute inset-0 bg-black/55"></div>
-        <div class="relative z-10">
-          <h1 class="font-roboto text-3xl font-bold md:text-5xl">Services</h1>
+      <!-- Background Image Slider -->
+      <section class="relative">
+        <!-- Carousel -->
+        <div
+          class="relative h-[370px] w-full md:h-[500px] lg:h-[600px] xl:h-[650px]"
+          id="background-carousel"
+          class="relative w-full"
+          data-carousel="slide"
+        >
+          <!-- Carousel wrapper -->
+          <div
+            class="relative h-[370px] overflow-hidden md:h-[500px] lg:h-[600px]"
+          >
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="../../public/asset/image/About.jpg"
+                class="absolute left-0 top-0 h-full w-full object-cover"
+                alt="About Us"
+              />
+              <div class="absolute inset-0 bg-black/55"></div>
+              <div
+                class="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 transform text-center text-white"
+              >
+                <h1 class="font-roboto text-3xl font-bold md:text-5xl">
+                  Services
+                </h1>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="../../public/asset/image/mission2.jpeg"
+                class="absolute left-0 top-0 h-full w-full object-cover"
+                alt="Image 2"
+              />
+              <div class="absolute inset-0 bg-black/55"></div>
+              <div
+                class="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 transform text-center text-white"
+              >
+                <h1 class="font-roboto text-3xl font-bold md:text-5xl">
+                  Services
+                </h1>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="../../public/asset/image/image4.jpg"
+                class="absolute left-0 top-0 h-full w-full object-cover"
+                alt="Image 3"
+              />
+              <div class="absolute inset-0 bg-black/55"></div>
+              <div
+                class="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 transform text-center text-white"
+              >
+                <h1 class="font-roboto text-3xl font-bold md:text-5xl">
+                  Services
+                </h1>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
+      <!-- Our Services Section -->
       <!-- Our Services Section -->
       <section class="container mx-auto mt-10">
         <h3
@@ -167,57 +222,241 @@
             <span
               class="mdi mdi-home-map-marker text-center text-xl text-blue-600 md:text-4xl"
             ></span>
-
             <h4
               class="text-center text-lg font-semibold text-gray-950 md:text-base lg:mt-5 lg:text-lg"
             >
-              Real estate management
+              Real Estate Management
             </h4>
             <p
               class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
             >
-              Buy and sell estates. We manage properties, including selling
-              buildings, buying land, and more.
+              We specialize in real estate management, including hotels and
+              guesthouses. Our services cover managing empty land, property
+              buying and selling, and renting furnished office spaces and core
+              office spaces.
             </p>
           </div>
 
-          <!-- Security Guards Service -->
+          <!-- Construction Engineering and Consultancy -->
           <div
-            class="flex min-h-[200px] flex-col rounded-lg bg-blue-700 p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
+            class="flex min-h-[200px] flex-col rounded-lg bg-blue-700 p-4 py-5 shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
           >
             <span
-              class="mdi mdi-shield-account text-center text-xl text-white md:text-4xl"
+              class="mdi mdi-account-hard-hat mdi mdi-construction text-center text-xl text-white md:text-4xl"
             ></span>
+
             <h4
               class="whitespace-nowrap text-center text-lg font-semibold text-white md:mt-5 md:text-base lg:text-lg"
             >
-              Security guards service
+              Construction Engineering
             </h4>
             <p
               class="mt-2 text-center text-sm leading-relaxed text-white md:text-sm lg:text-base"
             >
-              24/7 protection services for companies, homes, business areas, and
-              transportation.
+              We construct buildings of all kinds, including roads, drainages,
+              mini bridges, and general renovations.
             </p>
           </div>
 
-          <!-- Engineering and Consultant Services -->
+          <!-- Professional Land Surveys -->
           <div
             class="flex min-h-[200px] flex-col rounded-lg bg-white p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
           >
             <span
-              class="mdi mdi-wrench text-center text-xl text-blue-600 md:text-4xl"
+              class="mdi mdi-map-marker-path text-center text-xl text-blue-600 md:text-4xl"
             ></span>
             <h4
               class="mt-1 text-center text-lg font-semibold text-gray-950 md:-ml-4 md:whitespace-nowrap md:text-base lg:-ml-0 lg:mt-5 lg:text-lg"
             >
-              Engineering and Consultant
+              Professional Land Surveys
             </h4>
             <p
               class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
             >
-              We provide construction services for buildings, drainage, bridges,
-              and more.
+              Our services include professional land surveys, land layouts,
+              prepared map deeds, GPS surveys with coordinates, Google Earth
+              mapping, total station surveys, and cadastral surveys.
+            </p>
+          </div>
+
+          <!-- Security Guard and Consultancy -->
+          <div
+            class="flex min-h-[200px] flex-col rounded-lg bg-white p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
+          >
+            <span
+              class="mdi mdi-shield-account text-center text-xl text-blue-600 md:text-4xl"
+            ></span>
+            <h4
+              class="text-center text-lg font-semibold text-gray-950 md:text-base lg:mt-5 lg:text-lg"
+            >
+              Security Guard and Consultancy
+            </h4>
+            <p
+              class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
+            >
+              We provide VIP protection and security services for companies,
+              private homes, businesses, and transportation of goods and
+              services.
+            </p>
+          </div>
+
+          <!-- Shipping and Travel Agency -->
+          <div
+            class="flex min-h-[200px] flex-col rounded-lg bg-blue-700 p-4 py-5 text-white shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
+          >
+            <span
+              class="mdi mdi-airplane text-center text-xl text-white md:text-4xl"
+            ></span>
+            <h4
+              class="whitespace-nowrap text-center text-lg font-semibold text-white md:mt-5 md:text-base lg:text-lg"
+            >
+              Shipping and Travel Agency
+            </h4>
+            <p
+              class="mt-2 text-center text-sm leading-relaxed text-white md:text-sm lg:text-base"
+            >
+              We handle clearance controls, mediate and engage in airline
+              ticketing and delivery.
+            </p>
+          </div>
+
+          <!-- Social Counseling and Motivational Support -->
+          <div
+            class="flex min-h-[200px] flex-col rounded-lg bg-white p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
+          >
+            <span
+              class="mdi mdi-account-heart text-center text-xl text-blue-600 md:text-4xl"
+            ></span>
+            <h4
+              class="text-center text-lg font-semibold text-gray-950 md:text-base lg:mt-5 lg:text-lg"
+            >
+              Social Counseling and Motivational Support
+            </h4>
+            <p
+              class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
+            >
+              Our counseling services include marital counseling, motivational
+              counseling, and ecological counseling.
+            </p>
+          </div>
+
+          <!-- Sanitation and Maintenance Services -->
+          <div
+            class="flex min-h-[200px] flex-col rounded-lg bg-white p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
+          >
+            <span
+              class="mdi mdi-broom text-center text-xl text-blue-600 md:text-4xl"
+            ></span>
+            <h4
+              class="whitespace-nowrap text-center text-lg font-semibold text-gray-950 md:mt-5 md:text-base lg:text-lg"
+            >
+              Sanitation and Maintenance Services
+            </h4>
+            <p
+              class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
+            >
+              We maintain homes with house helpers (nurses) and provide road
+              maintenance for public buildings, hospitals, private homes, and
+              more.
+            </p>
+          </div>
+
+          <!-- Car Rental Services -->
+          <div
+            class="flex min-h-[200px] flex-col rounded-lg bg-blue-700 p-4 py-5 text-white shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
+          >
+            <span
+              class="mdi mdi-car text-center text-xl text-white md:text-4xl"
+            ></span>
+            <h4
+              class="whitespace-nowrap text-center text-lg font-semibold text-white md:mt-5 md:text-base lg:text-lg"
+            >
+              Car Rental Services
+            </h4>
+            <p
+              class="mt-2 text-center text-sm leading-relaxed text-white md:text-sm lg:text-base"
+            >
+              We offer a variety of car rental services, including VIP and
+              ordinary vehicles.
+            </p>
+          </div>
+
+          <!-- Old Folks Home and Healthcare Services -->
+          <div
+            class="flex min-h-[200px] flex-col rounded-lg bg-white p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
+          >
+            <span
+              class="mdi mdi-hospital-building text-center text-xl text-blue-600 md:text-4xl"
+            ></span>
+            <h4
+              class="whitespace-nowrap text-center text-lg font-semibold text-gray-950 md:mt-5 md:text-base lg:text-lg"
+            >
+              Old Folks Home and Healthcare Services
+            </h4>
+            <p
+              class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
+            >
+              We manage elderly care facilities with both local and
+              international healthcare services.
+            </p>
+          </div>
+
+          <!-- Micro Loan Services -->
+          <div
+            class="flex min-h-[200px] flex-col rounded-lg bg-white p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
+          >
+            <span
+              class="mdi mdi-cash-multiple text-center text-xl text-blue-600 md:text-4xl"
+            ></span>
+            <h4
+              class="whitespace-nowrap text-center text-lg font-semibold text-gray-950 md:mt-5 md:text-base lg:text-lg"
+            >
+              Micro Loan Services
+            </h4>
+            <p
+              class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
+            >
+              We offer legal business support and financial assistance through
+              micro-loans.
+            </p>
+          </div>
+
+          <!-- Agriculture -->
+          <div
+            class="flex min-h-[200px] flex-col rounded-lg bg-blue-700 p-4 py-5 text-white shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
+          >
+            <span
+              class="mdi mdi-sprout text-center text-xl text-white md:text-4xl"
+            ></span>
+            <h4
+              class="whitespace-nowrap text-center text-lg font-semibold text-white md:mt-5 md:text-base lg:text-lg"
+            >
+              Agriculture
+            </h4>
+            <p
+              class="mt-2 text-center text-sm leading-relaxed text-white md:text-sm lg:text-base"
+            >
+              We manage farms, including row crops and farm production, as well
+              as animal housing facilities.
+            </p>
+          </div>
+
+          <!-- Accounting and Economic Consultancy -->
+          <div
+            class="flex min-h-[200px] flex-col rounded-lg bg-white p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
+          >
+            <span
+              class="mdi mdi-calculator text-center text-xl text-blue-600 md:text-4xl"
+            ></span>
+            <h4
+              class="whitespace-nowrap text-center text-lg font-semibold text-gray-950 md:mt-5 md:text-base lg:text-lg"
+            >
+              Accounting and Economic Consultancy
+            </h4>
+            <p
+              class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
+            >
+              We provide expert accounting and economic advisory services.
             </p>
           </div>
 
@@ -229,21 +468,20 @@
               class="mdi mdi-school text-center text-xl text-blue-600 md:text-4xl"
             ></span>
             <h4
-              class="text-center text-lg font-semibold text-gray-950 md:text-base lg:mt-5 lg:text-lg"
+              class="whitespace-nowrap text-center text-lg font-semibold text-gray-950 md:mt-5 md:text-base lg:text-lg"
             >
               Vocational School
             </h4>
             <p
               class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
             >
-              Professional training and vocational education services for skill
-              development.
+              We offer vocational training and educational programs.
             </p>
           </div>
 
-          <!-- Delivery Services -->
+          <!-- Logistics and Supply -->
           <div
-            class="flex min-h-[200px] flex-col rounded-lg bg-blue-700 p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
+            class="flex min-h-[200px] flex-col rounded-lg bg-blue-700 p-4 py-5 text-white shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
           >
             <span
               class="mdi mdi-truck-delivery text-center text-xl text-white md:text-4xl"
@@ -251,55 +489,47 @@
             <h4
               class="whitespace-nowrap text-center text-lg font-semibold text-white md:mt-5 md:text-base lg:text-lg"
             >
-              Delivery Services
+              Logistics and Supply
             </h4>
             <p
               class="mt-2 text-center text-sm leading-relaxed text-white md:text-sm lg:text-base"
             >
-              Reliable delivery solutions for businesses and individuals.
+              Our services include managing logistics, transportation, and
+              supply chain operations.
             </p>
           </div>
 
-          <!-- Car Rental -->
+          <!-- Monitoring and Evaluation of Projects -->
           <div
             class="flex min-h-[200px] flex-col rounded-lg bg-white p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
           >
             <span
-              class="mdi mdi-car text-center text-xl text-blue-600 md:text-4xl"
+              class="mdi mdi-chart-bar text-center text-xl text-blue-600 md:text-4xl"
             ></span>
             <h4
-              class="text-center text-lg font-semibold text-gray-950 md:text-base lg:mt-5 lg:text-lg"
+              class="whitespace-nowrap text-center text-lg font-semibold text-gray-950 md:mt-5 md:text-base lg:text-lg"
             >
-              Car Rental
+              Monitoring and Evaluation of Projects
             </h4>
             <p
               class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
             >
-              Wide range of vehicles available for short and long-term rental.
-            </p>
-          </div>
-
-          <!-- Travel & Shipping -->
-          <div
-            class="flex min-h-[200px] flex-col rounded-lg bg-blue-700 p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
-          >
-            <span
-              class="mdi mdi-airplane-marker text-center text-xl text-white md:text-4xl"
-            ></span>
-            <h4
-              class="whitespace-nowrap text-center text-lg font-semibold text-white md:mt-5 md:text-base lg:text-lg"
-            >
-              Travel & Shipping
-            </h4>
-            <p
-              class="mt-2 text-center text-sm leading-relaxed text-white md:text-sm lg:text-base"
-            >
-              International travel arrangements and cargo shipping services.
+              We conduct project monitoring and evaluation to ensure efficiency
+              and success.
             </p>
           </div>
         </div>
       </section>
-
+      <section>
+        <!-- <button -->
+        <button
+          type="button"
+          id="back-to-top"
+          class="fixed bottom-5 right-5 bg-blue-600 px-2 py-1 text-white"
+        >
+          <span class="mdi mdi-chevron-up text-3xl"></span>
+        </button>
+      </section>
       <!-- Footer Section -->
       <footer
         class="mt-10 w-full bg-primary-color py-12 text-white md:mt-20 lg:whitespace-nowrap lg:text-base"

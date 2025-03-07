@@ -69,10 +69,7 @@
     <body>
       <div id="page" class="font-sans">
         <!-- Navigation -->
-        <nav
-          id="navbar"
-          class="fixed left-0 top-0 z-10 w-full bg-white shadow-none transition-all duration-500 ease-in-out"
-        >
+        <nav id="navbar">
           <div
             class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-4 md:px-6"
           >
@@ -87,21 +84,19 @@
             <!-- Mobile Menu Button -->
             <button class="lg:hidden" id="mobile-menu-button">
               <span
-                class="mdi mdi-menu text-3xl text-black transition-colors duration-500 ease-in-out md:text-5xl"
+                class="mdi mdi-menu text-3xl text-black duration-500 ease-in-out"
                 id="menu-icon"
               ></span>
             </button>
 
-            <ul class="hidden space-x-3 md:hidden md:space-x-6 lg:flex">
+            <ul class="hidden space-x-3 md:space-x-6 lg:flex">
               <li>
                 <a
                   href="../../src/index.html"
                   class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
+                  >Home</a
                 >
-                  Home
-                </a>
               </li>
-
               <li>
                 <a
                   href="../../src/pages/about.html"
@@ -116,7 +111,6 @@
                   >Services</a
                 >
               </li>
-
               <li>
                 <a
                   href="../../src/pages/contact.html"
@@ -136,11 +130,11 @@
 
           <!-- Mobile Menu -->
           <div
-            class="fixed inset-y-0 right-0 h-[calc(200vh-6rem)] w-64 translate-x-full transform bg-white transition-transform duration-300 lg:hidden"
+            class="fixed inset-y-0 right-0 z-50 h-screen w-64 translate-x-full transform bg-white transition-transform duration-300 ease-in-out"
             id="mobile-menu"
           >
             <span
-              class="mdi mdi-close absolute right-4 top-12 cursor-pointer text-3xl font-semibold"
+              class="mdi mdi-close absolute right-4 top-4 cursor-pointer text-3xl font-semibold"
               id="close-menu"
             ></span>
             <ul class="flex flex-col space-y-2 px-4 pb-4 pt-12">
@@ -172,7 +166,6 @@
                   >Contact</a
                 >
               </li>
-
               <li>
                 <a
                   href="../../src/pages/gallery.html"
@@ -201,7 +194,9 @@
             VIP Section
           </h2>
 
-          <div class="grid gap-5 md:grid-cols-2 lg:items-center">
+          <div
+            class="md:grid-cols-row grid gap-5 lg:grid-cols-2 lg:items-center"
+          >
             <!-- Images Column -->
             <div class="flex flex-col items-center space-y-6">
               <div class="h-75 w-[70%] overflow-hidden rounded-full shadow-lg">
@@ -416,25 +411,14 @@
                     href="#"
                     class="text-white transition-colors hover:text-blue-500"
                   >
-                    <i class="mdi mdi-facebook text-2xl"></i>
+                    <i class="mdi mdi-facebook text-xl"></i>
                   </a>
-                  <a
-                    href="#"
-                    class="text-white transition-colors hover:text-blue-400"
-                  >
-                    <i class="mdi mdi-twitter text-2xl"></i>
-                  </a>
+
                   <a
                     href="#"
                     class="text-white transition-colors hover:text-blue-600"
                   >
-                    <i class="mdi mdi-linkedin text-2xl"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="text-white transition-colors hover:text-pink-500"
-                  >
-                    <i class="mdi mdi-instagram text-2xl"></i>
+                    <i class="mdi mdi-linkedin text-xl"></i>
                   </a>
                 </div>
               </div>
@@ -445,35 +429,35 @@
                 <ul class="space-y-2">
                   <li>
                     <a
-                      href="../src/index.html"
+                      href="../../src/index.html"
                       class="transition-colors hover:text-blue-500"
                       >Home</a
                     >
                   </li>
                   <li>
                     <a
-                      href="../src/pages/about.html"
+                      href="../../src/pages/about.html"
                       class="transition-colors hover:text-blue-500"
                       >About</a
                     >
                   </li>
                   <li>
                     <a
-                      href="../src/pages/services.html"
+                      href="../../src/pages/services.html"
                       class="transition-colors hover:text-blue-500"
                       >Services</a
                     >
                   </li>
                   <li>
                     <a
-                      href="../src/pages/team.html"
+                      href="../../src/pages/team.html"
                       class="transition-colors hover:text-blue-500"
                       >Our Team</a
                     >
                   </li>
                   <li>
                     <a
-                      href="../src/pages/contact.html"
+                      href="../../src/pages/contact.html"
                       class="transition-colors hover:text-blue-500"
                       >Contact</a
                     >
@@ -486,38 +470,38 @@
                 <h6 class="mb-4 text-lg font-semibold uppercase">Services</h6>
                 <ul class="space-y-2">
                   <li>
-                    <a href="#" class="transition-colors hover:text-blue-500"
-                      >Real Estate Management</a
+                    <span class="transition-colors hover:text-blue-500"
+                      >Real Estate Management</span
                     >
                   </li>
                   <li>
-                    <a href="#" class="transition-colors hover:text-blue-500"
-                      >Security Guards</a
+                    <span class="transition-colors hover:text-blue-500"
+                      >Security Guards</span
                     >
                   </li>
                   <li>
-                    <a href="#" class="transition-colors hover:text-blue-500"
-                      >Engineering and Consultant</a
+                    <span class="transition-colors hover:text-blue-500"
+                      >Engineering and Consultant</span
                     >
                   </li>
                   <li>
-                    <a href="#" class="transition-colors hover:text-blue-500"
-                      >Vocation School</a
+                    <span class="transition-colors hover:text-blue-500"
+                      >Vocational School</span
                     >
                   </li>
                   <li>
-                    <a href="#" class="transition-colors hover:text-blue-500"
-                      >Delivery Services</a
+                    <span class="transition-colors hover:text-blue-500"
+                      >Delivery Services</span
                     >
                   </li>
                   <li>
-                    <a href="#" class="transition-colors hover:text-blue-500"
-                      >Car Rental</a
+                    <span class="transition-colors hover:text-blue-500"
+                      >Car Rental</span
                     >
                   </li>
                   <li>
-                    <a href="#" class="transition-colors hover:text-blue-500"
-                      >Travel & Shipping</a
+                    <span class="transition-colors hover:text-blue-500"
+                      >Travel & Shipping</span
                     >
                   </li>
                 </ul>
