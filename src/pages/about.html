@@ -12,14 +12,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   </head>
 
-  <body class="font-roboto antialiased">
+  <body id="header" class="font-roboto antialiased">
     <div id="page">
-      <nav
-        id="navbar"
-        class="fixed left-0 top-0 z-50 w-full bg-white shadow-none transition-all duration-500 ease-in-out"
-      >
+      <nav id="navbar">
         <div
           class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-4 md:px-6"
         >
@@ -34,21 +32,19 @@
           <!-- Mobile Menu Button -->
           <button class="lg:hidden" id="mobile-menu-button">
             <span
-              class="mdi mdi-menu text-3xl text-black transition-colors duration-500 ease-in-out"
+              class="mdi mdi-menu text-3xl text-black duration-500 ease-in-out"
               id="menu-icon"
             ></span>
           </button>
 
-          <ul class="hidden space-x-3 md:hidden md:space-x-6 lg:flex">
+          <ul class="hidden space-x-3 md:space-x-6 lg:flex">
             <li>
               <a
                 href="../../src/index.html"
                 class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
+                >Home</a
               >
-                Home
-              </a>
             </li>
-
             <li>
               <a
                 href="../../src/pages/about.html"
@@ -63,7 +59,6 @@
                 >Services</a
               >
             </li>
-
             <li>
               <a
                 href="../../src/pages/contact.html"
@@ -83,11 +78,11 @@
 
         <!-- Mobile Menu -->
         <div
-          class="fixed inset-y-0 right-0 h-[calc(200vh-6rem)] w-64 translate-x-full transform bg-white transition-transform duration-300"
+          class="fixed inset-y-0 right-0 z-50 h-screen w-64 translate-x-full transform bg-white transition-transform duration-300 ease-in-out"
           id="mobile-menu"
         >
           <span
-            class="mdi mdi-close absolute right-4 top-12 cursor-pointer text-3xl font-semibold"
+            class="mdi mdi-close absolute right-4 top-4 cursor-pointer text-3xl font-semibold"
             id="close-menu"
           ></span>
           <ul class="flex flex-col space-y-2 px-4 pb-4 pt-12">
@@ -119,7 +114,6 @@
                 >Contact</a
               >
             </li>
-
             <li>
               <a
                 href="../../src/pages/gallery.html"
@@ -131,15 +125,74 @@
         </div>
       </nav>
 
-      <!-- background-image image  -->
+      <!-- Backdrop for Mobile Menu -->
+      <div
+        class="fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out"
+        id="mobile-menu-backdrop"
+        style="display: none"
+      ></div>
 
-      <section
-        class="relative flex h-[370px] items-center justify-center bg-cover bg-center bg-no-repeat text-center text-white md:h-[500px] lg:h-[600px]"
-        style="background-image: url('../../public/asset/image/abouthero.jpeg')"
-      >
-        <div class="absolute inset-0 bg-black/55"></div>
-        <div class="relative z-10">
-          <h1 class="font-roboto text-3xl font-bold md:text-5xl">About Us</h1>
+      <!-- Background Image Slider -->
+      <section class="relative h-[370px] md:h-[500px] lg:h-[600px]">
+        <!-- Carousel -->
+        <div
+          id="background-carousel"
+          class="relative w-full"
+          data-carousel="slide"
+        >
+          <!-- Carousel wrapper -->
+          <div
+            class="relative h-[370px] overflow-hidden md:h-[500px] lg:h-[600px]"
+          >
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="../../public/asset/image/About.jpg"
+                class="absolute left-1/2 top-1/2 block h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover"
+                alt="About Us"
+              />
+              <div class="absolute inset-0 bg-black/55"></div>
+              <div
+                class="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 transform text-center text-white"
+              >
+                <h1 class="font-roboto text-3xl font-bold md:text-5xl">
+                  About Us
+                </h1>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="../../public/asset/image/mission2.jpeg"
+                class="absolute left-1/2 top-1/2 block h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover"
+                alt="Image 2"
+              />
+              <div class="absolute inset-0 bg-black/55"></div>
+              <div
+                class="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 transform text-center text-white"
+              >
+                <h1 class="font-roboto text-3xl font-bold md:text-5xl">
+                  About Us
+                </h1>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img
+                src="../../public/asset/image/image4.jpg"
+                class="absolute left-1/2 top-1/2 block h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover"
+                alt="Image 3"
+              />
+              <div class="absolute inset-0 bg-black/55"></div>
+              <div
+                class="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 transform text-center text-white"
+              >
+                <h1 class="font-roboto text-3xl font-bold md:text-5xl">
+                  About Us
+                </h1>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -168,7 +221,7 @@
             <img
               src="../../public/asset/image/image4.jpg"
               alt="Why Choose Philex"
-              class="h-[300px] w-full rounded-none object-cover md:rounded-b-xl md:rounded-t-xl lg:h-[500px]"
+              class="h-[300px] w-full rounded-none object-cover md:rounded-b-sm md:rounded-t-sm lg:h-[500px]"
             />
           </div>
 
@@ -302,9 +355,7 @@
                 Philip Topor
               </h2>
               <p class="text-sm">CEO</p>
-              <p
-                class="mt-2 text-left text-sm font-semibold text-gray-950 md:text-sm"
-              >
+              <p class="mt-2 text-sm text-gray-950 md:text-sm">
                 As CEO, I lead the company’s strategic direction, oversee
                 operations, and drive growth through innovation and strong
                 leadership.
@@ -327,9 +378,7 @@
                 Regina B. Topor
               </h2>
               <p class="text-base">General Manager</p>
-              <p
-                class="mt-2 text-left text-sm font-semibold text-gray-950 md:text-sm"
-              >
+              <p class="mt-2 text-sm text-gray-950 md:text-sm">
                 I oversee daily operations, coordinate business activities, and
                 ensure the company runs efficiently to achieve its strategic
                 goals.
@@ -352,9 +401,7 @@
                 Z. Michael Saye
               </h2>
               <p class="text-base">Accountant & Real Estate</p>
-              <p
-                class="mt-2 text-left text-sm font-semibold text-gray-950 md:text-sm"
-              >
+              <p class="mt-2 text-sm text-gray-950 md:text-sm">
                 Z. Michael is responsible for managing the company's financial
                 operations, ensuring stability and profitability.
               </p>
@@ -376,9 +423,7 @@
                 Sylvia Zeh
               </h2>
               <p class="text-base">Marketing General</p>
-              <p
-                class="mt-2 text-left text-sm font-semibold text-gray-950 md:text-sm"
-              >
+              <p class="mt-2 text-sm text-gray-950 md:text-sm">
                 Sylvia is responsible for managing the company's marketing
                 operations, ensuring its marketing strategies are effective and
                 efficient.
@@ -401,7 +446,7 @@
                 Rejoice D. George
               </h2>
               <p class="text-base">Database & Customer Care</p>
-              <p class="mt-2 text-left text-sm font-semibold text-gray-950">
+              <p class="mt-2 text-sm text-gray-950">
                 Rejoice manages the company's database and ensures customer care
                 operations are efficient and effective.
               </p>
@@ -422,7 +467,7 @@
                 Emily Clark
               </h2>
               <p class="text-base">Chief Security</p>
-              <p class="mt-2 text-left text-sm font-semibold text-gray-950">
+              <p class="mt-2 text-sm text-gray-950">
                 Emily ensures our customers receive the best possible service
                 and support.
               </p>
@@ -435,8 +480,8 @@
         <!-- Mission & Vision Section -->
         <section>
           <div class="container mx-auto px-6">
-            <div class="mb-5 text-center">
-              <h2 class="text-xl font-bold text-blue-600">
+            <div class="mb-10 text-center">
+              <h2 class="text-2xl font-bold text-blue-600">
                 Our Mission & Vision
               </h2>
             </div>
@@ -446,9 +491,9 @@
               <div class="flex-1 rounded-lg bg-white p-4 shadow-md">
                 <div class="mt-5 flex flex-col lg:flex-row lg:space-x-8">
                   <img
-                    src="../../public/asset/image/mission2.jpeg"
+                    src="../../public/asset/image/vision.jpeg"
                     alt="Mission"
-                    class="h-[300px] w-full rounded-lg object-cover lg:w-1/2 2xl:w-1/2"
+                    class="h-[300px] w-full rounded-lg object-cover lg:w-1/3 2xl:w-1/2"
                   />
                   <div>
                     <h3 class="mb-2 mt-2 text-xl font-semibold text-gray-800">
@@ -464,7 +509,7 @@
                 </div>
               </div>
               <!-- Vision -->
-              <div class="mt-5 flex-1 rounded-lg bg-white p-4 shadow-md">
+              <div class="flex-1 rounded-lg bg-white p-4 shadow-md">
                 <div class="mt-6 flex flex-col lg:flex-row lg:space-x-4">
                   <img
                     src="../../public/asset/image/vision.jpeg"
@@ -472,7 +517,7 @@
                     class="h-[300px] w-full rounded-lg object-cover lg:mb-0 lg:w-1/2 xl:w-1/3 2xl:w-1/2"
                   />
                   <div>
-                    <h3 class="mb-2 mt-2 text-2xl font-semibold text-gray-800">
+                    <h3 class="mb-2 mt-2 text-xl font-semibold text-gray-800">
                       Our Vision
                     </h3>
                     <p class="text-sm text-gray-950 md:text-sm">
@@ -486,6 +531,17 @@
               </div>
             </div>
           </div>
+        </section>
+
+        <section>
+          <!-- <button -->
+          <button
+            type="button"
+            id="back-to-top"
+            class="fixed bottom-5 right-5 bg-blue-600 px-2 py-1 text-white"
+          >
+            <span class="mdi mdi-chevron-up text-3xl"></span>
+          </button>
         </section>
 
         <!-- Footer Section -->
@@ -569,43 +625,30 @@
               </div>
 
               <!-- Services Section -->
+              <!-- Services Section -->
               <div>
                 <h6 class="mb-4 text-lg font-semibold uppercase">Services</h6>
                 <ul class="space-y-2">
-                  <li>
-                    <a href="#" class="transition-colors hover:text-blue-500"
-                      >Real Estate Management</a
-                    >
+                  <li class="transition-colors hover:text-blue-500">
+                    Real Estate Management
                   </li>
-                  <li>
-                    <a href="#" class="transition-colors hover:text-blue-500"
-                      >Security Guards</a
-                    >
+                  <li class="transition-colors hover:text-blue-500">
+                    Security Guards
                   </li>
-                  <li>
-                    <a href="#" class="transition-colors hover:text-blue-500"
-                      >Engineering and Consultant</a
-                    >
+                  <li class="transition-colors hover:text-blue-500">
+                    Engineering and Consultant
                   </li>
-                  <li>
-                    <a href="#" class="transition-colors hover:text-blue-500"
-                      >Vocation School</a
-                    >
+                  <li class="transition-colors hover:text-blue-500">
+                    Vocation School
                   </li>
-                  <li>
-                    <a href="#" class="transition-colors hover:text-blue-500"
-                      >Delivery Services</a
-                    >
+                  <li class="transition-colors hover:text-blue-500">
+                    Delivery Services
                   </li>
-                  <li>
-                    <a href="#" class="transition-colors hover:text-blue-500"
-                      >Car Rental</a
-                    >
+                  <li class="transition-colors hover:text-blue-500">
+                    Car Rental
                   </li>
-                  <li>
-                    <a href="#" class="transition-colors hover:text-blue-500"
-                      >Travel & Shipping</a
-                    >
+                  <li class="transition-colors hover:text-blue-500">
+                    Travel & Shipping
                   </li>
                 </ul>
               </div>

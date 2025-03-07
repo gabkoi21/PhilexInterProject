@@ -13,712 +13,755 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="../src/app.js"></script>
     <link rel="stylesheet" href="../src/input.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   </head>
 
   <body class="font-roboto">
-    <div id="page">
-      <nav
-        id="navbar"
-        class="fixed left-0 top-0 z-10 w-full bg-white shadow-none transition-all duration-500 ease-in-out"
+    <nav id="navbar">
+      <div
+        class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-4 md:px-6"
       >
-        <div
-          class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-4 md:px-6"
-        >
-          <!-- Page logo -->
-          <div id="gtco-logo" class="text-xl font-bold">
-            <img
-              src="../public/asset/image/image2.jpg"
-              alt=""
-              class="w-[40px] md:w-[5%]"
-            />
-          </div>
-          <!-- Mobile Menu Button -->
-          <button class="lg:hidden" id="mobile-menu-button">
-            <span
-              class="mdi mdi-menu text-3xl text-black transition-colors duration-500 ease-in-out md:text-5xl"
-              id="menu-icon"
-            ></span>
-          </button>
-
-          <ul class="hidden space-x-3 md:hidden md:space-x-6 lg:flex">
-            <li>
-              <a
-                href="../src/index.html"
-                class="nav-link active text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
-              >
-                Home
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="../src/pages/about.html"
-                class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                href="../src/pages/services.html"
-                class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
-                >Services</a
-              >
-            </li>
-
-            <li>
-              <a
-                href="../src/pages/contact.html"
-                class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
-                >Contact</a
-              >
-            </li>
-            <li>
-              <a
-                href="../src/pages/contact.html"
-                class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
-                >Gallery</a
-              >
-            </li>
-          </ul>
+        <!-- Page logo -->
+        <div id="gtco-logo" class="h-auto w-[40px] text-xl font-bold md:w-[5%]">
+          <img src="../public/asset/image/image2.jpg" alt="" />
         </div>
 
-        <!-- Mobile Menu -->
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden" id="mobile-menu-button">
+          <span
+            class="mdi mdi-menu text-3xl text-black duration-500 ease-in-out"
+            id="menu-icon"
+          ></span>
+        </button>
+
+        <ul class="hidden space-x-3 md:space-x-6 lg:flex">
+          <li>
+            <a
+              href="../../src/index.html"
+              class="nav-link active text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="../../src/pages/about.html"
+              class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="../../src/pages/services.html"
+              class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="../../src/pages/contact.html"
+              class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="../../src/pages/gallery.html"
+              class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
+              >Gallery</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        class="fixed inset-y-0 right-0 z-50 h-screen w-64 translate-x-full transform bg-white transition-transform duration-300 ease-in-out"
+        id="mobile-menu"
+      >
+        <span
+          class="mdi mdi-close absolute right-4 top-4 cursor-pointer text-3xl font-semibold"
+          id="close-menu"
+        ></span>
+        <ul class="flex flex-col space-y-2 px-4 pb-4 pt-12">
+          <li>
+            <a
+              href="../../src/index.html"
+              class="block py-2 text-lg font-semibold"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="../../src/pages/about.html"
+              class="block py-2 text-lg font-semibold"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="../../src/pages/services.html"
+              class="block py-2 text-lg font-semibold"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="../../src/pages/contact.html"
+              class="block py-2 text-lg font-semibold"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="../../src/pages/gallery.html"
+              class="block py-2 text-lg font-semibold"
+              >Gallery</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Backdrop for Mobile Menu -->
+    <div
+      class="fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out"
+      id="mobile-menu-backdrop"
+      style="display: none"
+    ></div>
+
+    <!-- Background Image Slider -->
+    <section class="relative h-[370px] md:h-[500px] lg:h-[600px]">
+      <!-- Carousel -->
+      <div
+        id="background-carousel"
+        class="relative w-full"
+        data-carousel="slide"
+      >
+        <!-- Carousel wrapper -->
         <div
-          class="fixed inset-y-0 right-0 h-[calc(200vh-6rem)] w-64 translate-x-full transform bg-white transition-transform duration-300 lg:hidden"
-          id="mobile-menu"
+          class="relative h-[370px] overflow-hidden md:h-[500px] lg:h-[600px]"
+        >
+          <!-- Item 1 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <!-- Hero Image -->
+            <img
+              src="../public/image2/HeroImage.jpeg"
+              class="absolute left-0 top-0 h-full w-full object-cover"
+              alt="About Us"
+            />
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black/55"></div>
+
+            <!-- Centered Text Content -->
+            <div
+              class="absolute inset-0 flex items-center justify-center text-center text-white"
+            >
+              <h1
+                class="text-center font-roboto text-xl font-bold capitalize leading-snug md:text-3xl md:leading-tight lg:text-6xl"
+              >
+                Welcome <br />to Philex International
+              </h1>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <!-- Hero Image -->
+            <img
+              src="../public/asset/image/About.jpg"
+              class="absolute left-0 top-0 h-full w-full object-cover"
+              alt="About Us"
+            />
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black/55"></div>
+
+            <!-- Centered Text Content -->
+            <div
+              class="absolute inset-0 flex items-center justify-center text-center text-white"
+            >
+              <h1
+                class="font-roboto text-xl font-bold capitalize leading-snug md:text-3xl md:leading-tight lg:text-6xl"
+              >
+                Empowering Businesses with <br />
+                Innovation and Excellence
+              </h1>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <!-- Hero Image -->
+            <img
+              src="../public/asset/image/mission2.jpeg"
+              class="absolute left-0 top-0 h-full w-full object-cover"
+              alt="About Us"
+            />
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black/55"></div>
+
+            <!-- Centered Text Content -->
+            <div
+              class="absolute inset-0 flex items-center justify-center text-center text-white"
+            >
+              <h1
+                class="font-roboto text-xl font-bold capitalize leading-snug md:text-3xl md:leading-tight lg:text-6xl"
+              >
+                Your Trusted Partner in <br />
+                Multipurpose Solutions
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="container mx-auto mt-10 px-4 md:mt-20 md:px-6 lg:px-8">
+      <div class="text-center">
+        <h3
+          class="text-lg font-bold capitalize text-gray-950 md:text-2xl lg:text-3xl"
+        >
+          Welcome to philex international
+        </h3>
+        <hr class="mx-auto mt-4 w-[20%] border-2 border-blue-600 md:w-1/12" />
+      </div>
+
+      <!-- Features Grid -->
+      <div class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <!-- Business Consulting -->
+        <div class="flex flex-col items-center">
+          <div
+            class="grid h-14 w-14 place-items-center rounded-full bg-gray-50"
+          >
+            <span
+              class="mdi mdi-briefcase animate-bounce text-2xl text-blue-700"
+            ></span>
+          </div>
+          <h4 class="mt-2 text-lg font-semibold text-gray-950 lg:text-lg">
+            Business Consulting
+          </h4>
+          <p class="text-center text-sm text-gray-950 lg:text-base">
+            Solution for every business related problems, readily and
+            skillfully.
+          </p>
+        </div>
+
+        <!-- Financial Services -->
+        <div class="flex flex-col items-center">
+          <div
+            class="grid h-14 w-14 place-items-center rounded-full bg-gray-50"
+          >
+            <span
+              class="mdi mdi-chart-pie animate-bounce text-2xl text-blue-700"
+            ></span>
+          </div>
+          <h4 class="mt-2 text-lg font-semibold text-gray-950 lg:text-lg">
+            Financial Services
+          </h4>
+          <p class="text-center text-sm text-gray-950 lg:text-base">
+            We help you to manage your finance and make right decisions.
+          </p>
+        </div>
+
+        <!-- Construction -->
+        <div class="flex flex-col items-center">
+          <div
+            class="grid h-14 w-14 place-items-center rounded-full bg-gray-50"
+          >
+            <span
+              class="mdi mdi-tools animate-bounce text-2xl text-blue-700"
+            ></span>
+          </div>
+          <h4 class="mt-2 text-lg font-semibold text-gray-950 lg:text-lg">
+            Construction
+          </h4>
+          <p class="text-center text-sm text-gray-950 lg:text-base">
+            Solution for every construction related problems, readily and
+            skillfully.
+          </p>
+        </div>
+
+        <!-- Quality Services -->
+        <div class="flex flex-col items-center">
+          <div
+            class="grid h-14 w-14 place-items-center rounded-full bg-gray-50"
+          >
+            <span
+              class="mdi mdi-account-group animate-bounce text-2xl text-blue-700"
+            ></span>
+          </div>
+          <h4 class="mt-2 text-lg font-semibold text-gray-950 lg:text-lg">
+            Quality Services
+          </h4>
+          <p class="text-center text-sm text-gray-950 lg:text-base">
+            Solution for every quality related problems, readily and skillfully.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section class="2xl:mt-25 container mx-auto mt-24">
+      <h3
+        class="mt-8 text-center text-2xl font-bold capitalize text-gray-950 md:mt-10 md:text-2xl lg:text-3xl"
+      >
+        Our Services
+      </h3>
+
+      <div
+        class="mb-10 grid grid-cols-1 gap-4 p-4 px-5 sm:grid-cols-2 md:mt-10 md:grid-cols-3 md:gap-6 md:p-6 lg:gap-10 lg:p-10"
+      >
+        <!-- Real Estate Management -->
+        <div
+          class="flex min-h-[200px] flex-col rounded-lg bg-white p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
         >
           <span
-            class="mdi mdi-close absolute right-4 top-12 cursor-pointer text-3xl font-semibold"
-            id="close-menu"
+            class="mdi mdi-home-map-marker text-center text-xl text-blue-600 md:text-4xl"
           ></span>
-          <ul class="flex flex-col space-y-2 px-4 pb-4 pt-12">
-            <li>
-              <a
-                href="../src/index.html"
-                class="block py-2 text-lg font-semibold"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="../src/pages/about.html"
-                class="block py-2 text-lg font-semibold"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                href="../src/pages/services.html"
-                class="block py-2 text-lg font-semibold"
-                >Services</a
-              >
-            </li>
-            <li>
-              <a
-                href="../src/pages/contact.html"
-                class="block py-2 text-lg font-semibold"
-                >Contact</a
-              >
-            </li>
 
-            <li>
-              <a
-                href="../src/pages/gallery.html"
-                class="block py-2 text-lg font-semibold"
-                >Gallery</a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <!-- background-image image  -->
-
-      <section
-        class="relative flex h-[370px] items-center justify-center bg-cover bg-center bg-no-repeat text-center text-white md:h-[500px] lg:h-[655px] xl:h-[655px] 2xl:h-[950px]"
-        style="background-image: url('../public/image2/HeroImage.jpeg')"
-      >
-        <div class="absolute inset-0 bg-black/60"></div>
-        <div class="relative z-10">
-          <h1
-            class="animate-slide-down font-roboto text-3xl font-bold capitalize md:text-3xl lg:text-5xl"
+          <h4
+            class="text-center text-lg font-semibold text-gray-950 md:text-base lg:mt-5 lg:text-lg"
           >
-            Philex international multipurpose <br />
-            company
-          </h1>
-        </div>
-      </section>
-
-      <!-- This is the welcome header   -->
-
-      <!-- Welcome Section -->
-      <section class="container mx-auto mt-10 px-4 md:px-6 lg:px-8">
-        <div class="text-center">
-          <h3
-            class="text-lg font-bold capitalize text-gray-950 md:text-2xl lg:text-3xl"
+            Real estate management
+          </h4>
+          <p
+            class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
           >
-            Welcome to philex international
-          </h3>
-          <hr class="mx-auto mt-4 w-[20%] border-2 border-blue-600 md:w-1/12" />
+            Buy and sell estates. We manage properties, including selling
+            buildings, buying land, and more.
+          </p>
         </div>
 
-        <!-- Features Grid -->
-        <div class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <!-- Business Consulting -->
-          <div class="flex flex-col items-center">
-            <div
-              class="grid h-14 w-14 place-items-center rounded-full bg-gray-50"
-            >
-              <span
-                class="mdi mdi-briefcase animate-bounce text-2xl text-blue-700"
-              ></span>
-            </div>
-            <h4 class="mt-2 text-lg font-semibold text-gray-950 lg:text-lg">
-              Business Consulting
-            </h4>
-            <p class="text-center text-sm text-gray-950 lg:text-base">
-              Solution for every business related problems, readily and
-              skillfully.
-            </p>
-          </div>
-
-          <!-- Financial Services -->
-          <div class="flex flex-col items-center">
-            <div
-              class="grid h-14 w-14 place-items-center rounded-full bg-gray-50"
-            >
-              <span
-                class="mdi mdi-chart-pie animate-bounce text-2xl text-blue-700"
-              ></span>
-            </div>
-            <h4 class="mt-2 text-lg font-semibold text-gray-950 lg:text-lg">
-              Financial Services
-            </h4>
-            <p class="text-center text-sm text-gray-950 lg:text-base">
-              We help you to manage your finance and make right decisions.
-            </p>
-          </div>
-
-          <!-- Construction -->
-          <div class="flex flex-col items-center">
-            <div
-              class="grid h-14 w-14 place-items-center rounded-full bg-gray-50"
-            >
-              <span
-                class="mdi mdi-tools animate-bounce text-2xl text-blue-700"
-              ></span>
-            </div>
-            <h4 class="mt-2 text-lg font-semibold text-gray-950 lg:text-lg">
-              Construction
-            </h4>
-            <p class="text-center text-sm text-gray-950 lg:text-base">
-              Solution for every construction related problems, readily and
-              skillfully.
-            </p>
-          </div>
-
-          <!-- Quality Services -->
-          <div class="flex flex-col items-center">
-            <div
-              class="grid h-14 w-14 place-items-center rounded-full bg-gray-50"
-            >
-              <span
-                class="mdi mdi-account-group animate-bounce text-2xl text-blue-700"
-              ></span>
-            </div>
-            <h4 class="mt-2 text-lg font-semibold text-gray-950 lg:text-lg">
-              Quality Services
-            </h4>
-            <p class="text-center text-sm text-gray-950 lg:text-base">
-              Solution for every quality related problems, readily and
-              skillfully.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Our Services Section -->
-      <section class="2xl:mt-25 container mx-auto mt-24">
-        <h3
-          class="mt-8 text-center text-2xl font-bold capitalize text-gray-950 md:mt-10 md:text-2xl lg:text-3xl"
-        >
-          Our Services
-        </h3>
-
+        <!-- Security Guards Service -->
         <div
-          class="mb-10 grid grid-cols-1 gap-4 p-4 px-5 sm:grid-cols-2 md:mt-10 md:grid-cols-3 md:gap-6 md:p-6 lg:gap-10 lg:p-10"
+          class="flex min-h-[200px] flex-col rounded-lg bg-blue-700 p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
         >
-          <!-- Real Estate Management -->
-          <div
-            class="flex min-h-[200px] flex-col rounded-lg bg-white p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
+          <span
+            class="mdi mdi-shield-account text-center text-xl text-white md:text-4xl"
+          ></span>
+          <h4
+            class="whitespace-nowrap text-center text-lg font-semibold text-white md:mt-5 md:text-base lg:text-lg"
           >
-            <span
-              class="mdi mdi-home-map-marker text-center text-xl text-blue-600 md:text-4xl"
-            ></span>
+            Security guards service
+          </h4>
+          <p
+            class="mt-2 text-center text-sm leading-relaxed text-white md:text-sm lg:text-base"
+          >
+            24/7 protection services for companies, homes, business areas, and
+            transportation.
+          </p>
+        </div>
 
-            <h4
-              class="text-center text-lg font-semibold text-gray-950 md:text-base lg:mt-5 lg:text-lg"
-            >
-              Real estate management
-            </h4>
-            <p
-              class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
-            >
-              Buy and sell estates. We manage properties, including selling
-              buildings, buying land, and more.
+        <!-- Engineering and Consultant Services -->
+        <div
+          class="flex min-h-[200px] flex-col rounded-lg bg-white p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
+        >
+          <span
+            class="mdi mdi-wrench text-center text-xl text-blue-600 md:text-4xl"
+          ></span>
+          <h4
+            class="mt-1 text-center text-lg font-semibold text-gray-950 md:-ml-4 md:whitespace-nowrap md:text-base lg:-ml-0 lg:mt-5 lg:text-lg"
+          >
+            Engineering and Consultant
+          </h4>
+          <p
+            class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
+          >
+            We provide construction services for buildings, drainage, bridges,
+            and more.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Philex Section -->
+
+    <section
+      class="container mx-auto mt-5 px-4 md:mt-10 md:px-10 lg:px-10 2xl:mt-24"
+    >
+      <!-- Heading remains the same -->
+      <h4
+        class="mt-10 text-center text-lg font-bold text-gray-950 md:text-xl lg:text-2xl"
+      >
+        Why Choose Philex
+      </h4>
+      <hr class="mx-auto mt-4 w-1/5 border-2 border-blue-600 md:w-1/12" />
+
+      <!-- Modified Content Container -->
+      <div class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <!-- Modified Image Section -->
+        <div class="w-full">
+          <img
+            src="../public/asset/image/image4.jpg"
+            alt="Why Choose Philex"
+            class="h-[400px] w-full object-cover md:h-[450px] md:rounded-none lg:h-[450px] xl:h-[550px] 2xl:h-[550px]"
+          />
+        </div>
+
+        <!-- Text Content -->
+        <div class="w-full space-y-6">
+          <!-- Professional Section -->
+          <div class="space-y-2">
+            <p class="text-base font-semibold text-gray-950 lg:text-lg">
+              We Are Professional
+            </p>
+            <p class="text-sm text-black md:text-sm lg:text-base">
+              We are a team of experienced and skilled professionals with a
+              passion for building and maintaining strong relationships with our
+              clients.
             </p>
           </div>
 
-          <!-- Security Guards Service -->
-          <div
-            class="flex min-h-[200px] flex-col rounded-lg bg-blue-700 p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
-          >
-            <span
-              class="mdi mdi-shield-account text-center text-xl text-white md:text-4xl"
-            ></span>
-            <h4
-              class="whitespace-nowrap text-center text-lg font-semibold text-white md:mt-5 md:text-base lg:text-lg"
-            >
-              Security guards service
-            </h4>
-            <p
-              class="mt-2 text-center text-sm leading-relaxed text-white md:text-sm lg:text-base"
-            >
-              24/7 protection services for companies, homes, business areas, and
-              transportation.
+          <!-- Creative Section -->
+          <div class="space-y-2">
+            <p class="text-base font-semibold text-gray-950 lg:text-lg">
+              We Are Creative
+            </p>
+            <p class="text-sm text-gray-950 md:text-sm lg:text-base">
+              With so many factors to consider when deciding how to characterize
+              your company, wouldn't it be great to have a team of
+              forward-thinking, well-informed individuals who know what they're
+              doing?
             </p>
           </div>
 
-          <!-- Engineering and Consultant Services -->
-          <div
-            class="flex min-h-[200px] flex-col rounded-lg bg-white p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
-          >
-            <span
-              class="mdi mdi-wrench text-center text-xl text-blue-600 md:text-4xl"
-            ></span>
-            <h4
-              class="mt-1 text-center text-lg font-semibold text-gray-950 md:-ml-4 md:whitespace-nowrap md:text-base lg:-ml-0 lg:mt-5 lg:text-lg"
-            >
-              Engineering and Consultant
-            </h4>
-            <p
-              class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
-            >
-              We provide construction services for buildings, drainage, bridges,
-              and more.
+          <!-- Support Section -->
+          <div class="space-y-2">
+            <p class="text-base font-semibold text-gray-950 lg:text-lg">
+              24/7 Great Support
+            </p>
+            <p class="text-sm text-gray-950 md:text-sm lg:text-base">
+              Our support team is always available to help you with any issues
+              or concerns you may have.
             </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Why Choose Philex Section -->
-
-      <section
-        class="container mx-auto mt-5 px-4 md:mt-10 md:px-10 lg:px-10 2xl:mt-24"
+    <section
+      class="mt-5 flex h-[50vh] flex-col justify-center bg-black sm:h-[45vh] md:mt-24 md:h-[10vh] lg:h-[30vh] xl:h-[30vh] 2xl:h-[20vh]"
+    >
+      <div
+        class="mx-auto flex flex-col items-center gap-10 py-5 md:flex-row xl:px-10 2xl:py-10"
       >
-        <!-- Heading remains the same -->
-        <h4
-          class="mt-10 text-center text-lg font-bold text-gray-950 md:text-xl lg:text-2xl"
+        <p
+          class="animate-slide-in mx-2 text-lg font-bold capitalize text-white md:mx-0 md:text-xl lg:text-xl xl:mt-5 2xl:text-3xl"
         >
-          Why Choose Philex
-        </h4>
-        <hr class="mx-auto mt-4 w-1/5 border-2 border-blue-600 md:w-1/12" />
+          if you have any query related investment... We are available 24/7
+        </p>
+        <a href="../src/pages/contact.html">
+          <button
+            class="mt-5 items-center rounded bg-white px-5 py-2 text-base font-semibold text-blue-700 md:mt-5"
+          >
+            Contact us
+          </button>
+        </a>
+      </div>
+    </section>
 
-        <!-- Modified Content Container -->
-        <div class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
-          <!-- Modified Image Section -->
-          <div class="w-full">
+    <!-- Our Team Section -->
+    <section class="container mx-auto mt-5 w-full md:px-0 lg:px-8">
+      <h3
+        class="mt-10 text-center text-lg font-bold text-gray-950 md:text-lg lg:text-3xl"
+      >
+        Meet Our Team
+        <hr
+          class="md:w-1/14 mx-auto mt-3 w-[10%] border-2 border-blue-600 md:mt-5 lg:mt-5 lg:w-[5%]"
+        />
+      </h3>
+
+      <div
+        class="mt-2 grid grid-cols-1 gap-6 px-5 py-5 md:mt-5 md:grid-cols-2 lg:grid-cols-3"
+      >
+        <!-- Team Member 1 - CEO -->
+        <div class="card bg-base-100 rounded-t-xl py-5">
+          <div
+            class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover lg:h-[300px] xl:h-[400px] 2xl:h-[450px]"
+          >
+            <img src="../public/image2/Ceo.jpeg" alt="Philip Topor - CEO" />
+          </div>
+          <div class="card-body text-center">
+            <h2
+              class="card-title mt-2 text-lg font-bold text-gray-950 lg:text-lg"
+            >
+              Philip Topor
+            </h2>
+            <p class="text-sm">CEO</p>
+            <p class="mt-2 text-sm text-gray-950 md:text-sm lg:text-sm">
+              As CEO, I lead the company's strategic direction, oversee
+              operations, and drive growth through innovation and strong
+              leadership.
+            </p>
+          </div>
+        </div>
+
+        <!-- Team Member 2 - General Manager -->
+        <div class="card bg-base-100 rounded-t-xl py-5">
+          <div
+            class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover lg:h-[300px] xl:h-[400px] 2xl:h-[450px]"
+          >
             <img
-              src="../public/asset/image/image4.jpg"
-              alt="Why Choose Philex"
-              class="h-[400px] w-full object-cover md:h-[500px] md:rounded-none lg:h-[500px] lg:rounded-b-xl lg:rounded-t-xl xl:h-[600px] 2xl:h-[550px]"
+              src="../public/image2/Gm.jpeg"
+              alt="Regina B. Topor - General Manager"
             />
           </div>
-
-          <!-- Text Content -->
-          <div class="w-full space-y-6">
-            <!-- Professional Section -->
-            <div class="space-y-2">
-              <p class="text-base font-semibold text-gray-950 lg:text-lg">
-                We Are Professional
-              </p>
-              <p class="text-sm text-black md:text-sm lg:text-base">
-                We are a team of experienced and skilled professionals with a
-                passion for building and maintaining strong relationships with
-                our clients.
-              </p>
-            </div>
-
-            <!-- Creative Section -->
-            <div class="space-y-2">
-              <p class="text-base font-semibold text-gray-950 lg:text-lg">
-                We Are Creative
-              </p>
-              <p class="text-sm text-gray-950 md:text-sm lg:text-base">
-                With so many factors to consider when deciding how to
-                characterize your company, wouldn't it be great to have a team
-                of forward-thinking, well-informed individuals who know what
-                they're doing?
-              </p>
-            </div>
-
-            <!-- Support Section -->
-            <div class="space-y-2">
-              <p class="text-base font-semibold text-gray-950 lg:text-lg">
-                24/7 Great Support
-              </p>
-              <p class="text-sm text-gray-950 md:text-sm lg:text-base">
-                Our support team is always available to help you with any issues
-                or concerns you may have.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="mt-5 flex h-[50vh] flex-col justify-center bg-black sm:h-[45vh] md:mt-24 md:h-[10vh] lg:h-[30vh] xl:h-[30vh] 2xl:h-[20vh]"
-      >
-        <div
-          class="mx-auto flex flex-col items-center gap-10 py-5 md:flex-row xl:px-10 2xl:py-10"
-        >
-          <p
-            class="animate-slide-in mx-2 text-lg font-bold capitalize text-white md:mx-0 md:text-xl lg:text-xl xl:mt-5 2xl:text-3xl"
-          >
-            if you have any query related investment... We are available 24/7
-          </p>
-          <a href="../src/pages/contact.html">
-            <button
-              class="mt-5 items-center rounded bg-white px-5 py-2 text-base font-semibold text-blue-700 md:mt-1"
-            >
-              Contact us
-            </button>
-          </a>
-        </div>
-      </section>
-
-      <!-- Our Team Section -->
-      <section class="container mx-auto mt-5 w-full md:px-0 lg:px-8">
-        <h3
-          class="mt-10 text-center text-lg font-bold text-gray-950 md:text-lg lg:text-3xl"
-        >
-          Meet Our Team
-          <hr
-            class="md:w-1/14 mx-auto mt-3 w-[10%] border-2 border-blue-600 md:mt-5 lg:mt-5 lg:w-[5%]"
-          />
-        </h3>
-
-        <div
-          class="mt-2 grid grid-cols-1 gap-6 px-5 py-5 md:mt-5 md:grid-cols-2 lg:grid-cols-3"
-        >
-          <!-- Team Member 1 - CEO -->
-          <div class="card bg-base-100 rounded-t-xl py-5">
-            <div
-              class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover lg:h-[300px] xl:h-[400px] 2xl:h-[450px]"
-            >
-              <img src="../public/image2/Ceo.jpeg" alt="Philip Topor - CEO" />
-            </div>
-            <div class="card-body text-center">
-              <h2
-                class="card-title mt-2 text-lg font-bold text-gray-950 lg:text-lg"
-              >
-                Philip Topor
-              </h2>
-              <p class="text-sm">CEO</p>
-              <p
-                class="mt-2 text-left text-sm font-semibold text-gray-950 md:text-sm lg:text-sm"
-              >
-                As CEO, I lead the company's strategic direction, oversee
-                operations, and drive growth through innovation and strong
-                leadership.
-              </p>
-            </div>
-          </div>
-
-          <!-- Team Member 2 - General Manager -->
-          <div class="card bg-base-100 rounded-t-xl py-5">
-            <div
-              class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover lg:h-[300px] xl:h-[400px] 2xl:h-[450px]"
-            >
-              <img
-                src="../public/image2/Gm.jpeg"
-                alt="Regina B. Topor - General Manager"
-              />
-            </div>
-            <div class="card-body mt-2 text-center">
-              <h2 class="card-title text-lg font-bold text-gray-950 lg:text-lg">
-                Regina B. Topor
-              </h2>
-              <p class="text-base">General Manager</p>
-              <p
-                class="mt-2 text-left text-sm font-semibold text-gray-950 md:text-sm lg:text-sm"
-              >
-                I oversee daily operations, coordinate business activities, and
-                ensure the company runs efficiently to achieve its strategic
-                goals.
-              </p>
-            </div>
-          </div>
-
-          <!-- Team Member 3 - Accountant & Real Estate -->
-          <div class="card bg-base-100 rounded-t-xl py-5">
-            <div
-              class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover lg:h-[300px] xl:h-[400px] 2xl:h-[450px]"
-            >
-              <img
-                src="../public/image2/account.jpeg"
-                alt="Z. Michael Saye - Accountant & Real Estate"
-              />
-            </div>
-            <div class="card-body text-center">
-              <h2
-                class="card-title mt-2 text-lg font-bold text-gray-950 lg:text-lg"
-              >
-                Z. Michael Saye
-              </h2>
-              <p class="text-base md:text-base">Accountant & Real Estate</p>
-              <p
-                class="mt-2 text-left text-sm font-semibold text-gray-950 lg:text-sm"
-              >
-                Z. Michael is responsible for managing the company's financial
-                operations, ensuring stability and profitability.
-              </p>
-            </div>
-          </div>
-
-          <!-- Team Member 4 - Marketing General -->
-          <div class="card bg-base-100 rounded-t-xl py-5">
-            <div
-              class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover lg:h-[300px] xl:h-[400px] 2xl:h-[450px]"
-            >
-              <img
-                src="../public/image2/marketGen.jpeg"
-                alt="Sylvia Zeh - Marketing General"
-              />
-            </div>
-            <div class="card-body text-center">
-              <h2
-                class="card-title mt-2 text-lg font-bold text-gray-950 lg:text-lg"
-              >
-                Sylvia Zeh
-              </h2>
-              <p class="text-base md:text-base">Marketing General</p>
-              <p
-                class="mt-2 text-left text-sm font-semibold text-gray-950 md:text-sm lg:text-sm"
-              >
-                Sylvia is responsible for managing the company's marketing
-                operations, ensuring its marketing strategies are effective and
-                efficient.
-              </p>
-            </div>
-          </div>
-
-          <!-- Team Member 5 - Database & Customer Care -->
-          <div class="card bg-base-100 rounded-t-xl py-5">
-            <div
-              class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover lg:h-[300px] xl:h-[400px] 2xl:h-[450px]"
-            >
-              <img
-                src="../public/image2/customercare.jpeg"
-                alt="Rejoice D. George - Database & Customer Care"
-              />
-            </div>
-            <div class="card-body text-center">
-              <h2
-                class="card-title mt-2 text-lg font-bold text-gray-950 lg:text-lg"
-              >
-                Rejoice D. George
-              </h2>
-              <p class="text-base md:text-base">Database & Customer Care</p>
-              <p
-                class="mt-2 text-left text-sm font-semibold text-gray-950 lg:text-sm"
-              >
-                Rejoice manages the company's database and ensures customer care
-                operations are efficient and effective.
-              </p>
-            </div>
-          </div>
-
-          <!-- Team Member 6 - Chief Security -->
-          <div class="card bg-base-100 rounded-t-xl py-5">
-            <div
-              class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover lg:h-[300px] xl:h-[400px] 2xl:h-[450px]"
-            >
-              <img
-                src="../public/asset/image/image3.jpg"
-                alt="Emily Clark - Chief Security"
-              />
-            </div>
-            <div class="card-body text-center">
-              <h2
-                class="card-title mt-2 text-lg font-bold text-gray-950 lg:text-lg"
-              >
-                Emily Clark
-              </h2>
-              <p class="text-base capitalize md:text-base">Chief Security</p>
-              <p
-                class="mt-2 text-left text-sm font-semibold text-gray-950 lg:text-sm"
-              >
-                Emily ensures our customers receive the best possible service
-                and support.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer Section -->
-      <footer
-        class="mt-10 w-full bg-primary-color py-12 text-white md:mt-20 lg:whitespace-nowrap lg:text-base"
-      >
-        <div class="container mx-auto px-4 md:px-6 lg:px-10">
-          <!-- Footer Grid -->
-          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <!-- Social Media Section -->
-            <div>
-              <h6 class="mb-4 text-lg font-semibold uppercase">Follow Us</h6>
-              <div class="flex gap-4">
-                <a
-                  href="#"
-                  class="text-white transition-colors hover:text-blue-500"
-                >
-                  <i class="mdi mdi-facebook text-2xl"></i>
-                </a>
-                <a
-                  href="#"
-                  class="text-white transition-colors hover:text-blue-400"
-                >
-                  <i class="mdi mdi-twitter text-2xl"></i>
-                </a>
-                <a
-                  href="#"
-                  class="text-white transition-colors hover:text-blue-600"
-                >
-                  <i class="mdi mdi-linkedin text-2xl"></i>
-                </a>
-                <a
-                  href="#"
-                  class="text-white transition-colors hover:text-pink-500"
-                >
-                  <i class="mdi mdi-instagram text-2xl"></i>
-                </a>
-              </div>
-            </div>
-
-            <!-- Navigation Section -->
-            <div>
-              <h6 class="mb-4 text-lg font-semibold uppercase">Navigation</h6>
-              <ul class="space-y-2">
-                <li>
-                  <a
-                    href="../src/index.html"
-                    class="transition-colors hover:text-blue-500"
-                    >Home</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../src/pages/about.html"
-                    class="transition-colors hover:text-blue-500"
-                    >About</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../src/pages/services.html"
-                    class="transition-colors hover:text-blue-500"
-                    >Services</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../src/pages/team.html"
-                    class="transition-colors hover:text-blue-500"
-                    >Our Team</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../src/pages/contact.html"
-                    class="transition-colors hover:text-blue-500"
-                    >Contact</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <!-- Services Section -->
-            <div>
-              <h6 class="mb-4 text-lg font-semibold uppercase">Services</h6>
-              <ul class="space-y-2">
-                <li>
-                  <a href="#" class="transition-colors hover:text-blue-500"
-                    >Real Estate Management</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-blue-500"
-                    >Security Guards</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-blue-500"
-                    >Engineering and Consultant</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-blue-500"
-                    >Vocation School</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-blue-500"
-                    >Delivery Services</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-blue-500"
-                    >Car Rental</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-blue-500"
-                    >Travel & Shipping</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <!-- Contact Section -->
-            <div>
-              <h6 class="mb-4 text-lg font-semibold uppercase">Contact Info</h6>
-              <ul class="space-y-2">
-                <li>Email: philexinternational172@gmail.com</li>
-                <li>Phone: +231 775 4449 9753</li>
-                <li>
-                  Website:
-                  <a
-                    href="https://www.philexinternational.com"
-                    class="transition-colors hover:text-blue-500"
-                  >
-                    www.philexinternational.com
-                  </a>
-                </li>
-                <li>Address: Sd Cooper Road, Monrovia, Liberia</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Copyright Section -->
-          <div
-            class="mt-12 border-t border-gray-700 pt-8 text-center md:text-start lg:text-start"
-          >
-            <p class="text-gray-400">
-              &copy; 2025 Philex. All rights reserved.
+          <div class="card-body mt-2 text-center">
+            <h2 class="card-title text-lg font-bold text-gray-950 lg:text-lg">
+              Regina B. Topor
+            </h2>
+            <p class="text-base">General Manager</p>
+            <p class="mt-2 text-sm text-gray-950 md:text-sm lg:text-sm">
+              I oversee daily operations, coordinate business activities, and
+              ensure the company runs efficiently to achieve its strategic
+              goals.
             </p>
           </div>
         </div>
-      </footer>
-    </div>
+
+        <!-- Team Member 3 - Accountant & Real Estate -->
+        <div class="card bg-base-100 rounded-t-xl py-5">
+          <div
+            class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover lg:h-[300px] xl:h-[400px] 2xl:h-[450px]"
+          >
+            <img
+              src="../public/image2/account.jpeg"
+              alt="Z. Michael Saye - Accountant & Real Estate"
+            />
+          </div>
+          <div class="card-body text-center">
+            <h2
+              class="card-title mt-2 text-lg font-bold text-gray-950 lg:text-lg"
+            >
+              Z. Michael Saye
+            </h2>
+            <p class="text-base md:text-base">Accountant & Real Estate</p>
+            <p class="mt-2 text-sm text-gray-950 lg:text-sm">
+              Z. Michael is responsible for managing the company's financial
+              operations, ensuring stability and profitability.
+            </p>
+          </div>
+        </div>
+
+        <!-- Team Member 4 - Marketing General -->
+        <div class="card bg-base-100 rounded-t-xl py-5">
+          <div
+            class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover lg:h-[300px] xl:h-[400px] 2xl:h-[450px]"
+          >
+            <img
+              src="../public/image2/marketGen.jpeg"
+              alt="Sylvia Zeh - Marketing General"
+            />
+          </div>
+          <div class="card-body text-center">
+            <h2
+              class="card-title mt-2 text-lg font-bold text-gray-950 lg:text-lg"
+            >
+              Sylvia Zeh
+            </h2>
+            <p class="text-base md:text-base">Marketing General</p>
+            <p class="mt-2 text-sm text-gray-950 md:text-sm lg:text-sm">
+              Sylvia is responsible for managing the company's marketing
+              operations, ensuring its marketing strategies are effective and
+              efficient.
+            </p>
+          </div>
+        </div>
+
+        <!-- Team Member 5 - Database & Customer Care -->
+        <div class="card bg-base-100 rounded-t-xl py-5">
+          <div
+            class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover lg:h-[300px] xl:h-[400px] 2xl:h-[450px]"
+          >
+            <img
+              src="../public/image2/customercare.jpeg"
+              alt="Rejoice D. George - Database & Customer Care"
+            />
+          </div>
+          <div class="card-body text-center">
+            <h2
+              class="card-title mt-2 text-lg font-bold text-gray-950 lg:text-lg"
+            >
+              Rejoice D. George
+            </h2>
+            <p class="text-base md:text-base">Database & Customer Care</p>
+            <p class="mt-2 text-sm text-gray-950 lg:text-sm">
+              Rejoice manages the company's database and ensures customer care
+              operations are efficient and effective.
+            </p>
+          </div>
+        </div>
+
+        <!-- Team Member 6 - Chief Security -->
+        <div class="card bg-base-100 rounded-t-xl py-5">
+          <div
+            class="h-[300px] w-full overflow-hidden rounded-t-xl object-cover lg:h-[300px] xl:h-[400px] 2xl:h-[450px]"
+          >
+            <img
+              src="../public/asset/image/image3.jpg"
+              alt="Emily Clark - Chief Security"
+            />
+          </div>
+          <div class="card-body text-center">
+            <h2
+              class="card-title mt-2 text-lg font-bold text-gray-950 lg:text-lg"
+            >
+              Emily Clark
+            </h2>
+            <p class="text-base capitalize md:text-base">Chief Security</p>
+            <p class="mt-2 text-sm text-gray-950 lg:text-sm">
+              Emily ensures our customers receive the best possible service and
+              support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <!-- <button -->
+      <button
+        type="button"
+        id="back-to-top"
+        class="fixed bottom-5 right-5 bg-blue-600 px-2 py-1 text-white"
+      >
+        <span class="mdi mdi-chevron-up text-3xl"></span>
+      </button>
+    </section>
+
+    <!-- Footer Section -->
+    <footer
+      class="mt-10 w-full bg-primary-color py-12 text-white md:mt-20 lg:whitespace-nowrap lg:text-base"
+    >
+      <div class="container mx-auto px-4 md:px-6 lg:px-10">
+        <!-- Footer Grid -->
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Social Media Section -->
+          <div>
+            <h6 class="mb-4 text-lg font-semibold uppercase">Follow Us</h6>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="text-white transition-colors hover:text-blue-500"
+              >
+                <i class="mdi mdi-facebook text-2xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white transition-colors hover:text-blue-400"
+              >
+                <i class="mdi mdi-twitter text-2xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white transition-colors hover:text-blue-600"
+              >
+                <i class="mdi mdi-linkedin text-2xl"></i>
+              </a>
+              <a
+                href="#"
+                class="text-white transition-colors hover:text-pink-500"
+              >
+                <i class="mdi mdi-instagram text-2xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Navigation Section -->
+          <div>
+            <h6 class="mb-4 text-lg font-semibold uppercase">Navigation</h6>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="../src/index.html"
+                  class="transition-colors hover:text-blue-500"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../src/pages/about.html"
+                  class="transition-colors hover:text-blue-500"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../src/pages/services.html"
+                  class="transition-colors hover:text-blue-500"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../src/pages/team.html"
+                  class="transition-colors hover:text-blue-500"
+                  >Our Team</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../src/pages/contact.html"
+                  class="transition-colors hover:text-blue-500"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services Section -->
+          <div>
+            <h6 class="mb-4 text-lg font-semibold uppercase">Services</h6>
+            <ul class="space-y-2">
+              <li class="transition-colors hover:text-blue-500">
+                Real Estate Management
+              </li>
+              <li class="transition-colors hover:text-blue-500">
+                Security Guards
+              </li>
+              <li class="transition-colors hover:text-blue-500">
+                Engineering and Consultant
+              </li>
+              <li class="transition-colors hover:text-blue-500">
+                Vocation School
+              </li>
+              <li class="transition-colors hover:text-blue-500">
+                Delivery Services
+              </li>
+              <li class="transition-colors hover:text-blue-500">Car Rental</li>
+              <li class="transition-colors hover:text-blue-500">
+                Travel & Shipping
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Section -->
+          <div>
+            <h6 class="mb-4 text-lg font-semibold uppercase">Contact Info</h6>
+            <ul class="space-y-2">
+              <li>Email: philexinternational172@gmail.com</li>
+              <li>Phone: +231 775 4449 9753</li>
+              <li>
+                Website:
+                <a
+                  href="https://www.philexinternational.com"
+                  class="transition-colors hover:text-blue-500"
+                >
+                  www.philexinternational.com
+                </a>
+              </li>
+              <li>Address: Sd Cooper Road, Monrovia, Liberia</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div
+          class="mt-12 border-t border-gray-700 pt-8 text-center md:text-start lg:text-start"
+        >
+          <p class="text-gray-400">&copy; 2025 Philex. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

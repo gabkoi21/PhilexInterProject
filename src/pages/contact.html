@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,6 +15,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../../src/input.css" />
     <script defer src="../../src/app.js"></script>
+    <script defer src="../../src/email.js"></script>
+    <script defer src="../../public/public_key.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
 
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
@@ -22,375 +28,426 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
     />
-  </head>
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>philex International</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Free HTML5 Website Template" />
+      <meta
+        name="keywords"
+        content="free website templates, html5, tailwindcss, responsive"
+      />
+      <meta name="author" content="FreeHTML5.co" />
+      <!-- Tailwind CSS CDN -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="../../src/input.css" />
+      <script defer src="../../src/app.js"></script>
+      <script defer src="../../src/email.js"></script>
+      <script defer src="../../public/public_key.js"></script>
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+      ></script>
 
-  <body>
-    <div id="page" class="font-sans">
-      <!-- Navigation -->
-      <nav
-        id="navbar"
-        class="fixed left-0 top-0 z-10 w-full bg-white shadow-none transition-all duration-500 ease-in-out"
-      >
-        <div
-          class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-4 md:px-6"
+      <!-- Modernizr JS -->
+      <script src="js/modernizr-2.6.2.min.js"></script>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+      />
+    </head>
+
+    <body>
+      <div id="page" class="font-sans">
+        <!-- Navigation -->
+        <nav
+          id="navbar"
+          class="fixed left-0 top-0 z-10 w-full bg-white shadow-none transition-all duration-500 ease-in-out"
         >
-          <!-- Page logo -->
-          <div id="gtco-logo" class="text-xl font-bold">
-            <img
-              src="../public/asset/image/image2.jpg"
-              alt=""
-              class="w-[40px] md:w-[5%]"
-            />
-          </div>
-          <!-- Mobile Menu Button -->
-          <button class="lg:hidden" id="mobile-menu-button">
-            <span
-              class="mdi mdi-menu text-3xl text-black transition-colors duration-500 ease-in-out md:text-5xl"
-              id="menu-icon"
-            ></span>
-          </button>
-
-          <ul class="hidden space-x-3 md:hidden md:space-x-6 lg:flex">
-            <li>
-              <a
-                href="../../src/index.html"
-                class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
-              >
-                Home
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="../../src/pages/about.html"
-                class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                href="../../src/pages/services.html"
-                class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
-                >Services</a
-              >
-            </li>
-
-            <li>
-              <a
-                href="../../src/pages/contact.html"
-                class="nav-link active text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
-                >Contact</a
-              >
-            </li>
-            <li>
-              <a
-                href="../../src/pages/gallery.html"
-                class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
-                >Gallery</a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div
-          class="fixed inset-y-0 right-0 h-[calc(200vh-6rem)] w-64 translate-x-full transform bg-white transition-transform duration-300 lg:hidden"
-          id="mobile-menu"
-        >
-          <span
-            class="mdi mdi-close absolute right-4 top-12 cursor-pointer text-3xl font-semibold"
-            id="close-menu"
-          ></span>
-          <ul class="flex flex-col space-y-2 px-4 pb-4 pt-12">
-            <li>
-              <a
-                href="../../src/index.html"
-                class="block py-2 text-lg font-semibold"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="../../src/pages/about.html"
-                class="block py-2 text-lg font-semibold"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                href="../../src/pages/services.html"
-                class="block py-2 text-lg font-semibold"
-                >Services</a
-              >
-            </li>
-            <li>
-              <a
-                href="../../src/pages/contact.html"
-                class="block py-2 text-lg font-semibold"
-                >Contact</a
-              >
-            </li>
-
-            <li>
-              <a
-                href="../../src/pages/gallery.html"
-                class="block py-2 text-lg font-semibold"
-                >Gallery</a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <!-- Hero Section -->
-      <section
-        class="relative flex h-[400px] items-center justify-center bg-cover bg-center text-center text-white md:h-[390px] lg:h-[85vh]"
-        style="background-image: url('../../public/asset/image/image1.jpg')"
-      >
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="z-10">
-          <h1 class="text-5xl font-semibold md:text-6xl">Contact Us</h1>
-        </div>
-      </section>
-
-      <section class="container mx-auto px-4 md:mt-20 md:px-6 lg:px-10">
-        <h2 class="ml-2 mt-10 text-2xl font-semibold uppercase text-gray-800">
-          Contact info
-        </h2>
-        <div
-          class="mt-5 flex w-full max-w-6xl flex-col rounded-lg bg-white shadow-lg md:flex-row"
-        >
-          <!-- Contact Info Section -->
           <div
-            class="rounded-lg bg-blue-700 p-6 text-white md:w-1/2 md:rounded-r-none"
+            class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-4 md:px-6"
           >
-            <p class="mb-2 flex items-center">
-              <span class="mdi mdi-map-marker mr-2"></span> Sd Cooper Road,
-              Monrovia, Liberia
-            </p>
-            <p class="mb-2 flex items-center">
-              <span class="mdi mdi-email mr-2"></span>
-              philexinternational172@gmail.com
-            </p>
-            <p class="mb-2 flex items-center">
-              <span class="mdi mdi-phone mr-2"></span> +231 775 4449 9753
-            </p>
-            <p class="flex items-center">
-              <span class="mdi mdi-web mr-2"></span>
-              <a href="https://www.philexinternational.com" class="underline"
-                >www.philexinternational.com</a
-              >
-            </p>
-            <!-- Customer Support Section -->
-            <h2 class="mb-4 mt-6 text-xl font-semibold">Customer Support</h2>
-            <p class="mb-2">
-              For any inquiries or support, please contact our customer support
-              team:
-            </p>
-            <p class="mb-2">Email: support@philexinternational.com</p>
-            <p class="mb-2">Phone: +231 775 4449 9754</p>
-            <p class="mb-2">Live Chat: Available 24/7 on our website</p>
+            <!-- Page logo -->
+            <div id="gtco-logo" class="text-xl font-bold">
+              <img
+                src="../public/asset/image/image2.jpg"
+                alt=""
+                class="w-[40px] md:w-[5%]"
+              />
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden" id="mobile-menu-button">
+              <span
+                class="mdi mdi-menu text-3xl text-black transition-colors duration-500 ease-in-out md:text-5xl"
+                id="menu-icon"
+              ></span>
+            </button>
+
+            <ul class="hidden space-x-3 md:hidden md:space-x-6 lg:flex">
+              <li>
+                <a
+                  href="../../src/index.html"
+                  class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
+                >
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="../../src/pages/about.html"
+                  class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../../src/pages/services.html"
+                  class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
+                  >Services</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="../../src/pages/contact.html"
+                  class="nav-link active text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../../src/pages/gallery.html"
+                  class="nav-link text-lg font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
+                  >Gallery</a
+                >
+              </li>
+            </ul>
           </div>
 
-          <!-- Contact Form Section -->
-          <div class="p-6 md:w-2/3">
-            <h2 class="text-2xl font-semibold text-gray-800">Get in Touch</h2>
-            <p class="mb-4 text-gray-500">Feel free to drop us a line below!</p>
-            <form class="space-y-4">
-              <input
-                type="text"
-                placeholder="Your Name"
-                class="w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-0"
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                class="w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-0"
-              />
-              <textarea
-                placeholder="Typing your message here..."
-                rows="4"
-                class="w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-0"
-              ></textarea>
-              <button
-                class="w-full rounded-sm bg-blue-700 px-20 py-3 text-white transition duration-300 hover:bg-blue-950 md:w-auto"
-              >
-                SEND
-              </button>
-            </form>
+          <!-- Mobile Menu -->
+          <div
+            class="fixed inset-y-0 right-0 h-[calc(200vh-6rem)] w-64 translate-x-full transform bg-white transition-transform duration-300 lg:hidden"
+            id="mobile-menu"
+          >
+            <span
+              class="mdi mdi-close absolute right-4 top-12 cursor-pointer text-3xl font-semibold"
+              id="close-menu"
+            ></span>
+            <ul class="flex flex-col space-y-2 px-4 pb-4 pt-12">
+              <li>
+                <a
+                  href="../../src/index.html"
+                  class="block py-2 text-lg font-semibold"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../../src/pages/about.html"
+                  class="block py-2 text-lg font-semibold"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../../src/pages/services.html"
+                  class="block py-2 text-lg font-semibold"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../../src/pages/contact.html"
+                  class="block py-2 text-lg font-semibold"
+                  >Contact</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="../../src/pages/gallery.html"
+                  class="block py-2 text-lg font-semibold"
+                  >Gallery</a
+                >
+              </li>
+            </ul>
           </div>
-        </div>
-      </section>
+        </nav>
 
-      <!-- Map Location Section -->
-      <section class="container mx-auto mt-20 px-4 md:px-6 lg:px-10">
-        <h2 class="text-2xl font-semibold uppercase text-gray-800">
-          Our Location
-        </h2>
-        <div class="mt-4">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.1234567890123!2d-10.7969!3d6.3133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e0f1234567890ab%3A0x1234567890abcdef!2sSd%20Cooper%20Road%2C%20Monrovia%2C%20Liberia!5e0!3m2!1sen!2sus!4v1633024800000!5m2!1sen!2sus"
-            width="100%"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
-        </div>
-      </section>
+        <!-- Hero Section -->
+        <section
+          class="relative flex h-[400px] items-center justify-center bg-cover bg-center text-center text-white md:h-[390px] lg:h-[85vh]"
+          style="background-image: url('../../public/asset/image/image1.jpg')"
+        >
+          <div class="absolute inset-0 bg-black opacity-50"></div>
+          <div class="z-10">
+            <h1 class="text-5xl font-semibold md:text-6xl">Contact Us</h1>
+          </div>
+        </section>
 
-      <!-- Footer Section -->
-      <footer
-        class="mt-10 w-full bg-primary-color py-12 text-white md:mt-20 lg:whitespace-nowrap lg:text-base"
-      >
-        <div class="container mx-auto px-4 md:px-6 lg:px-10">
-          <!-- Footer Grid -->
-          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <!-- Social Media Section -->
-            <div>
-              <h6 class="mb-4 text-lg font-semibold uppercase">Follow Us</h6>
-              <div class="flex gap-4">
-                <a
-                  href="#"
-                  class="text-white transition-colors hover:text-blue-500"
+        <section class="container mx-auto px-4 md:mt-20 md:px-6 lg:px-10">
+          <h2 class="ml-2 mt-10 text-2xl font-semibold uppercase text-gray-800">
+            Contact info
+          </h2>
+          <div
+            class="mt-5 flex w-full max-w-6xl flex-col rounded-lg bg-white shadow-lg md:flex-row"
+          >
+            <!-- Contact Info Section -->
+            <div
+              class="rounded-lg bg-blue-700 p-6 text-white md:w-1/2 md:rounded-r-none"
+            >
+              <p class="mb-2 flex items-center">
+                <span class="mdi mdi-map-marker mr-2"></span> Sd Cooper Road,
+                Monrovia, Liberia
+              </p>
+              <p class="mb-2 flex items-center">
+                <span class="mdi mdi-email mr-2"></span>
+                philexinternational172@gmail.com
+              </p>
+              <p class="mb-2 flex items-center">
+                <span class="mdi mdi-phone mr-2"></span> +231 775 4449 9753
+              </p>
+              <p class="flex items-center">
+                <span class="mdi mdi-web mr-2"></span>
+                <a href="https://www.philexinternational.com" class="underline"
+                  >www.philexinternational.com</a
                 >
-                  <i class="mdi mdi-facebook text-2xl"></i>
-                </a>
-                <a
-                  href="#"
-                  class="text-white transition-colors hover:text-blue-400"
-                >
-                  <i class="mdi mdi-twitter text-2xl"></i>
-                </a>
-                <a
-                  href="#"
-                  class="text-white transition-colors hover:text-blue-600"
-                >
-                  <i class="mdi mdi-linkedin text-2xl"></i>
-                </a>
-                <a
-                  href="#"
-                  class="text-white transition-colors hover:text-pink-500"
-                >
-                  <i class="mdi mdi-instagram text-2xl"></i>
-                </a>
+              </p>
+              <!-- Customer Support Section -->
+              <h2 class="mb-4 mt-6 text-xl font-semibold">Customer Support</h2>
+              <p class="mb-2">
+                For any inquiries or support, please contact our customer
+                support team:
+              </p>
+              <p class="mb-2">Email: support@philexinternational.com</p>
+              <p class="mb-2">Phone: +231 775 4449 9754</p>
+              <p class="mb-2">Live Chat: Available 24/7 on our website</p>
+            </div>
+
+            <!-- Contact Form Section -->
+            <div class="p-6 md:w-2/3">
+              <h2 class="text-2xl font-semibold text-gray-800">Get in Touch</h2>
+              <p class="mb-4 text-gray-500">
+                Feel free to drop us a line below!
+              </p>
+              <form id="form" class="space-y-4">
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Your Name"
+                  required
+                  name="name"
+                  class="w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-0"
+                />
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Your Email"
+                  required
+                  name="email"
+                  class="w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-0"
+                />
+                <textarea
+                  id="message"
+                  placeholder="Typing your message here..."
+                  rows="4"
+                  name="message"
+                  required
+                  class="w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-0"
+                ></textarea>
+                <input
+                  type="submit"
+                  id="button"
+                  value="Send Message "
+                  class="cursor-pointer rounded-md bg-blue-700 px-10 py-2 font-semibold uppercase text-white"
+                />
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- Map Location Section -->
+        <section class="container mx-auto mt-20 px-4 md:px-6 lg:px-10">
+          <h2 class="text-2xl font-semibold uppercase text-gray-800">
+            Our Location
+          </h2>
+          <div class="mt-4">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.1234567890123!2d-10.7969!3d6.3133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e0f1234567890ab%3A0x1234567890abcdef!2sSd%20Cooper%20Road%2C%20Monrovia%2C%20Liberia!5e0!3m2!1sen!2sus!4v1633024800000!5m2!1sen!2sus"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </section>
+
+        <script type="text/javascript">
+          emailjs.init('gWtQrfjctvZ0-5lok');
+        </script>
+
+        <script type="text/javascript">
+          emailjs.init('gWtQrfjctvZ0-5lok');
+        </script>
+
+        <!-- Footer Section -->
+        <footer
+          class="mt-10 w-full bg-primary-color py-12 text-white md:mt-20 lg:whitespace-nowrap lg:text-base"
+        >
+          <div class="container mx-auto px-4 md:px-6 lg:px-10">
+            <!-- Footer Grid -->
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+              <!-- Social Media Section -->
+              <div>
+                <h6 class="mb-4 text-lg font-semibold uppercase">Follow Us</h6>
+                <div class="flex gap-4">
+                  <a
+                    href="#"
+                    class="text-white transition-colors hover:text-blue-500"
+                  >
+                    <i class="mdi mdi-facebook text-2xl"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="text-white transition-colors hover:text-blue-400"
+                  >
+                    <i class="mdi mdi-twitter text-2xl"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="text-white transition-colors hover:text-blue-600"
+                  >
+                    <i class="mdi mdi-linkedin text-2xl"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="text-white transition-colors hover:text-pink-500"
+                  >
+                    <i class="mdi mdi-instagram text-2xl"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Navigation Section -->
+              <div>
+                <h6 class="mb-4 text-lg font-semibold uppercase">Navigation</h6>
+                <ul class="space-y-2">
+                  <li>
+                    <a
+                      href="../src/index.html"
+                      class="transition-colors hover:text-blue-500"
+                      >Home</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../src/pages/about.html"
+                      class="transition-colors hover:text-blue-500"
+                      >About</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../src/pages/services.html"
+                      class="transition-colors hover:text-blue-500"
+                      >Services</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../src/pages/team.html"
+                      class="transition-colors hover:text-blue-500"
+                      >Our Team</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../src/pages/contact.html"
+                      class="transition-colors hover:text-blue-500"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Services Section -->
+              <div>
+                <h6 class="mb-4 text-lg font-semibold uppercase">Services</h6>
+                <ul class="space-y-2">
+                  <li>
+                    <a href="#" class="transition-colors hover:text-blue-500"
+                      >Real Estate Management</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="transition-colors hover:text-blue-500"
+                      >Security Guards</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="transition-colors hover:text-blue-500"
+                      >Engineering and Consultant</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="transition-colors hover:text-blue-500"
+                      >Vocation School</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="transition-colors hover:text-blue-500"
+                      >Delivery Services</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="transition-colors hover:text-blue-500"
+                      >Car Rental</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="transition-colors hover:text-blue-500"
+                      >Travel & Shipping</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Contact Section -->
+              <div>
+                <h6 class="mb-4 text-lg font-semibold uppercase">
+                  Contact Info
+                </h6>
+                <ul class="space-y-2">
+                  <li>Email: philexinternational172@gmail.com</li>
+                  <li>Phone: +231 775 4449 9753</li>
+                  <li>
+                    Website:
+                    <a
+                      href="https://www.philexinternational.com"
+                      class="transition-colors hover:text-blue-500"
+                    >
+                      www.philexinternational.com
+                    </a>
+                  </li>
+                  <li>Address: Sd Cooper Road, Monrovia, Liberia</li>
+                </ul>
               </div>
             </div>
 
-            <!-- Navigation Section -->
-            <div>
-              <h6 class="mb-4 text-lg font-semibold uppercase">Navigation</h6>
-              <ul class="space-y-2">
-                <li>
-                  <a
-                    href="../src/index.html"
-                    class="transition-colors hover:text-blue-500"
-                    >Home</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../src/pages/about.html"
-                    class="transition-colors hover:text-blue-500"
-                    >About</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../src/pages/services.html"
-                    class="transition-colors hover:text-blue-500"
-                    >Services</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../src/pages/team.html"
-                    class="transition-colors hover:text-blue-500"
-                    >Our Team</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../src/pages/contact.html"
-                    class="transition-colors hover:text-blue-500"
-                    >Contact</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <!-- Services Section -->
-            <div>
-              <h6 class="mb-4 text-lg font-semibold uppercase">Services</h6>
-              <ul class="space-y-2">
-                <li>
-                  <a href="#" class="transition-colors hover:text-blue-500"
-                    >Real Estate Management</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-blue-500"
-                    >Security Guards</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-blue-500"
-                    >Engineering and Consultant</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-blue-500"
-                    >Vocation School</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-blue-500"
-                    >Delivery Services</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-blue-500"
-                    >Car Rental</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="transition-colors hover:text-blue-500"
-                    >Travel & Shipping</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <!-- Contact Section -->
-            <div>
-              <h6 class="mb-4 text-lg font-semibold uppercase">Contact Info</h6>
-              <ul class="space-y-2">
-                <li>Email: philexinternational172@gmail.com</li>
-                <li>Phone: +231 775 4449 9753</li>
-                <li>
-                  Website:
-                  <a
-                    href="https://www.philexinternational.com"
-                    class="transition-colors hover:text-blue-500"
-                  >
-                    www.philexinternational.com
-                  </a>
-                </li>
-                <li>Address: Sd Cooper Road, Monrovia, Liberia</li>
-              </ul>
+            <!-- Copyright Section -->
+            <div
+              class="mt-12 border-t border-gray-700 pt-8 text-center md:text-start lg:text-start"
+            >
+              <p class="text-gray-400">
+                &copy; 2025 Philex. All rights reserved.
+              </p>
             </div>
           </div>
-
-          <!-- Copyright Section -->
-          <div
-            class="mt-12 border-t border-gray-700 pt-8 text-center md:text-start lg:text-start"
-          >
-            <p class="text-gray-400">
-              &copy; 2025 Philex. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </body>
+        </footer>
+      </div>
+    </body>
+  </head>
 </html>
