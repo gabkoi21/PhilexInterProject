@@ -265,3 +265,122 @@
 
 //Thus is footer styles 
   class="text-center text-white lg:text-left mt-20 primary-bg-color border border-red-700"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- Our Services Section -->
+    <section class="2xl:mt-25 container mx-auto mt-24">
+      <h3
+        class="mt-8 text-center text-2xl font-bold capitalize text-gray-950 md:mt-10 md:text-2xl lg:text-3xl"
+      >
+        Our Services
+      </h3>
+
+      <div
+        class="mb-10 grid grid-cols-1 gap-4 p-4 px-5 sm:grid-cols-2 md:mt-10 md:grid-cols-3 md:gap-6 md:p-6 lg:gap-10 lg:p-10"
+      >
+        <!-- Real Estate Management -->
+        <div
+          class="flex min-h-[200px] flex-col rounded-lg bg-white p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
+        >
+          <span
+            class="mdi mdi-home-map-marker text-center text-xl text-blue-600 md:text-4xl"
+          ></span>
+          <h4
+            class="text-center text-lg font-semibold text-gray-950 md:text-base lg:mt-5 lg:text-lg"
+          >
+            Real Estate Management
+          </h4>
+          <p
+            class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
+          >
+            We specialize in real estate management, including hotels and
+            guesthouses. Our services cover managing empty land, property buying
+            and selling, and renting furnished office spaces and core office
+            spaces.
+          </p>
+        </div>
+
+        <!-- Construction Engineering and Consultancy -->
+        <div
+          class="flex min-h-[200px] flex-col rounded-lg bg-blue-700 p-4 py-5 shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
+        >
+          <span
+            class="mdi mdi-account-hard-hat mdi mdi-construction text-center text-xl text-white md:text-4xl"
+          ></span>
+
+          <h4
+            class="whitespace-nowrap text-center text-lg font-semibold text-white md:mt-5 md:text-base lg:text-lg"
+          >
+            Construction Engineering
+          </h4>
+          <p
+            class="mt-2 text-center text-sm leading-relaxed text-white md:text-sm lg:text-base"
+          >
+            We construct buildings of all kinds, including roads, drainages,
+            mini bridges, and general renovations.
+          </p>
+        </div>
+
+        <!-- Professional Land Surveys -->
+        <div
+          class="flex min-h-[200px] flex-col rounded-lg bg-white p-4 py-5 text-black shadow-lg md:p-4 lg:min-h-[250px] lg:p-3"
+        >
+          <span
+            class="mdi mdi-map-marker-path text-center text-xl text-blue-600 md:text-4xl"
+          ></span>
+          <h4
+            class="mt-1 text-center text-lg font-semibold text-gray-950 md:-ml-4 md:whitespace-nowrap md:text-base lg:-ml-0 lg:mt-5 lg:text-lg"
+          >
+            Professional Land Surveys
+          </h4>
+          <p
+            class="mt-2 text-center text-sm leading-relaxed text-black opacity-80 md:text-sm lg:text-base"
+          >
+            Our services include professional land surveys, land layouts,
+            prepared map deeds, GPS surveys with coordinates, Google Earth
+            mapping, total station surveys, and cadastral surveys.
+          </p>
+        </div>
+      </div>
+    </section>
