@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "tailwindcss build -i src/input.css -o public/output.css --watch",
+    "build": "tailwindcss build -i src/input.css -o public/output.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "aos": "^2.3.4",
+    "daisyui": "^4.12.23",
+    "flowbite": "^2.5.2",
+    "normalize.css": "^8.0.1",
+    "tailwindcss-elevation": "^2.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.2",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^3.4.17"
+  }
+}
