@@ -3,13 +3,9 @@ import flowbite from 'flowbite/plugin';
 
 module.exports = {
   content: [
-    './src/index.html',
-    './src/**/*.{html,js,jsx,ts,tsx}',
-    './src/components/**/*.{html,js,jsx,ts,tsx}',
-    './src/pages/**/*.{html,js,jsx,ts,tsx}',
-    './public/pages/**/*.{html,js,jsx,ts,tsx}',
-    './public/pages/**/*.{html,js,jsx,ts,tsx}',
-    './node_modules/flowbite/**/*.js',
+    './public/index.html', // Ensure index.html is being scanned
+    './src/**/*.{js,jsx,ts,tsx}', // Scan all components and pages in src
+    './node_modules/flowbite/**/*.js', // Include Flowbite components
   ],
   theme: {
     extend: {
