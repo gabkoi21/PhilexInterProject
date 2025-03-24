@@ -4,9 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-css": "tailwindcss build -i src/input.css -o public/output.css --watch",
-    "build-css": "tailwindcss build -i src/input.css -o public/output.css",
-    "build": "mkdir -p build && tailwindcss build -i src/input.css -o build/output.css"
+    "build-css": "tailwindcss build -i src/input.css -o public/output.css --watch",
+    "build": "tailwindcss build -i src/input.css -o public/output.css"
   },
   "keywords": [],
   "author": "",
