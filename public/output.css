@@ -3067,6 +3067,10 @@ body{
     height: 85vh;
   }
 
+  .lg\:h-\[90vh\]{
+    height: 90vh;
+  }
+
   .lg\:min-h-\[250px\]{
     min-height: 250px;
   }

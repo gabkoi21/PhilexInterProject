@@ -6,551 +6,459 @@
     <title>Philex international</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Free HTML5 Website Template" />
-    <!-- Tailwind CSS CDN -->
-    <link rel="stylesheet" href="../../src/input.css" />
-    <!-- <link rel="stylesheet" href="../../public/output.css" /> -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../input.css" />
+    <link rel="stylesheet" href="../output.css" />
+    <script defer src="../app.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Modernizr JS -->
-    <script src="js/modernizr-2.6.2.min.js"></script>
-    <script defer src="../../src/app.js"></script>
-    <!-- Material Design Icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
     />
-
-    <!-- Flowbite CSS and JS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
-      rel="stylesheet"
-    />
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"
-    ></script>
-
-    <!-- Custom JS -->
-    <script defer src="../../src/app.js"></script>
-    <head>
-      <meta charset="utf-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <title>Philex international</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content="Free HTML5 Website Template" />
-
-      <!-- Tailwind CSS CDN -->
-      <script src="https://cdn.tailwindcss.com"></script>
-      <link rel="stylesheet" href="../../src/input.css" />
-
-      <!-- Modernizr JS -->
-      <script src="js/modernizr-2.6.2.min.js"></script>
-
-      <!-- Material Design Icons -->
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
-      />
-
-      <!-- Flowbite CSS and JS -->
-      <link
-        href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
-        rel="stylesheet"
-      />
-      <script
-        defer
-        src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"
-      ></script>
-
-      <!-- Custom JS -->
-      <script defer src="../../src/app.js"></script>
-    </head>
-
-    <body>
-      <div id="page" class="font-sans">
-        <!-- Navigation -->
-        <nav id="navbar">
-          <div
-            class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-4 md:px-6"
-          >
-            <!-- Page logo -->
-            <!-- Page logo -->
-            <div
-              id="gtco-logo"
-              class="h-auto w-[55px] text-xl font-bold md:w-[5%]"
-            >
-              <img src="../../public/asset/page_images/logo.jpg" alt="" />
-            </div>
-            <!-- Mobile Menu Button -->
-            <button class="lg:hidden" id="mobile-menu-button">
-              <span
-                class="mdi mdi-menu text-3xl text-black duration-500 ease-in-out"
-                id="menu-icon"
-              ></span>
-            </button>
-
-            <ul class="hidden space-x-3 md:space-x-6 lg:flex">
-              <li>
-                <a
-                  href="../../public/index.html"
-                  class="nav-link text-xl font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../../public/pages/about.html"
-                  class="nav-link text-xl font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
-                  >About</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../../public/pages/services.html"
-                  class="nav-link text-xl font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
-                  >Services</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../../public/pages/contact.html"
-                  class="nav-link text-xl font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
-                  >Contact</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../../public/pages/gallery.html"
-                  class="nav-link active text-xl font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
-                  >Gallery</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Mobile Menu -->
-          <div
-            class="fixed inset-y-0 right-0 z-50 h-screen w-64 translate-x-full transform bg-white transition-transform duration-300 ease-in-out"
-            id="mobile-menu"
-          >
-            <span
-              class="mdi mdi-close absolute right-4 top-4 cursor-pointer text-3xl font-semibold"
-              id="close-menu"
-            ></span>
-            <ul class="flex flex-col space-y-2 px-4 pb-4 pt-12">
-              <li>
-                <a
-                  href="../../public/index.html"
-                  class="block py-2 text-lg font-semibold"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../../public/pages/about.html"
-                  class="block py-2 text-lg font-semibold"
-                  >About</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../../public/pages/services.html"
-                  class="block py-2 text-lg font-semibold"
-                  >Services</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../../public/pages/contact.html"
-                  class="block py-2 text-lg font-semibold"
-                  >Contact</a
-                >
-              </li>
-              <li>
-                <a
-                  href="../../public/pages/gallery.html"
-                  class="block py-2 text-lg font-semibold"
-                  >Gallery</a
-                >
-              </li>
-            </ul>
-          </div>
-        </nav>
-
-        <!-- Hero Section -->
-        <section
-          class="relative flex h-[400px] items-center justify-center bg-cover bg-center text-center text-white md:h-[390px] lg:h-[85vh]"
-          style="
-            background-image: url('../../public/asset/page_images/Hero_image3.jpg');
-          "
-        >
-          <div class="absolute inset-0 bg-black opacity-50"></div>
-          <div class="z-10">
-            <h1 class="text-5xl font-semibold md:text-6xl">Gallery</h1>
-          </div>
-        </section>
-
-        <!-- This is for vip  -->
-        <section class="container mx-auto px-4 py-12 md:px-6 lg:px-10">
-          <h2 class="mb-8 text-center text-4xl font-bold text-gray-900">
-            VIP Section
-          </h2>
-
-          <div
-            class="md:grid-cols-row grid gap-5 lg:grid-cols-2 lg:items-center"
-          >
-            <!-- Images Column -->
-            <div class="flex flex-col items-center space-y-6">
-              <div class="h-75 w-[70%] overflow-hidden rounded-full shadow-lg">
-                <img
-                  src="../../public/asset/gallery_images/vip1.jpg"
-                  alt="VIP Section Interior"
-                  class="object-cover"
-                />
-              </div>
-              <div class="h-75 w-[70%] overflow-hidden rounded-full shadow-lg">
-                <img
-                  src="../../public/asset/gallery_images/vip2.jpg"
-                  alt="VIP Section Interior"
-                  class="object-cover"
-                />
-              </div>
-              <div class="h-75 w-[70%] overflow-hidden rounded-full shadow-lg">
-                <img
-                  src="../../public/asset/gallery_images/vip3.jpg"
-                  alt="VIP Section Interior"
-                  class="object-cover"
-                />
-              </div>
-            </div>
-
-            <!-- Features Column is for vip frature  -->
-            <div class="rounded-lg bg-white p-8 shadow-lg">
-              <h3 class="text-2xl font-bold text-gray-950">Premium Features</h3>
-              <ul class="mt-8 space-y-4 text-lg leading-relaxed text-gray-700">
-                <li class="flex items-center">
-                  <i
-                    class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"
-                  ></i>
-                  Premium Bath
-                </li>
-                <li class="flex items-center">
-                  <i
-                    class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"
-                  ></i>
-                  Fully Air Conditioned
-                </li>
-                <li class="flex items-center">
-                  <i
-                    class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"
-                  ></i>
-                  24/7 Security
-                </li>
-                <li class="flex items-center">
-                  <i
-                    class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"
-                  ></i>
-                  Power Supply
-                </li>
-                <li class="flex items-center">
-                  <i
-                    class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"
-                  ></i>
-                  Water System
-                </li>
-                <li class="flex items-center">
-                  <i
-                    class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"
-                  ></i>
-                  High-Speed Internet
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- This is the ordinary  -->
-        <section class="container mx-auto px-4 py-12 md:px-6 lg:px-10">
-          <h2 class="mb-8 text-center text-4xl font-bold text-gray-900">
-            Ordinary Section
-          </h2>
-
-          <div class="grid gap-5 md:grid-cols-2 lg:items-center">
-            <!-- Images Column -->
-            <div class="flex flex-col items-center space-y-6">
-              <div class="h-75 w-[70%] overflow-hidden rounded-full shadow-lg">
-                <img
-                  src="../../public/asset/gallery_images/gallery1.jpeg"
-                  alt="VIP Section Interior"
-                  class="object-cover"
-                />
-              </div>
-              <div class="h-75 w-[70%] overflow-hidden rounded-full shadow-lg">
-                <img
-                  src="../../public/asset/gallery_images/gallery2.jpeg"
-                  alt="VIP Section Amenities"
-                  class="object-cover"
-                />
-              </div>
-            </div>
-
-            <!-- Features Column -->
-            <div class="rounded-lg bg-white p-8 shadow-lg">
-              <h3 class="text-2xl font-bold text-gray-950">Premium Features</h3>
-              <ul class="mt-8 space-y-4 text-lg leading-relaxed text-gray-700">
-                <li class="flex items-center">
-                  <i
-                    class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"
-                  ></i>
-                  Extender Bath
-                </li>
-                <li class="flex items-center">
-                  <i
-                    class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"
-                  ></i>
-                  Fully Air Conditioned
-                </li>
-                <li class="flex items-center">
-                  <i
-                    class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"
-                  ></i>
-                  24/7 Security
-                </li>
-                <li class="flex items-center">
-                  <i
-                    class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"
-                  ></i>
-                  Power Supply
-                </li>
-
-                <li class="flex items-center">
-                  <i
-                    class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"
-                  ></i>
-                  High-Speed Internet
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- This is the ordinary  -->
-        <section class="container mx-auto px-4 py-12 md:px-6 lg:px-10">
-          <h2 class="mb-8 text-center text-4xl font-bold text-gray-900">
-            Complex Section
-          </h2>
-
-          <div class="grid gap-5 md:grid-cols-2 lg:items-center">
-            <!-- Images Column -->
-            <div class="flex flex-col items-center space-y-6">
-              <div class="h-75 w-[70%] overflow-hidden rounded-full shadow-lg">
-                <img
-                  src="../../public/asset/gallery_images/gallery5.jpeg"
-                  alt="VIP Section Interior"
-                  class="object-cover"
-                />
-              </div>
-            </div>
-
-            <!-- Features Column -->
-            <div class="rounded-lg bg-white p-8 shadow-lg">
-              <h3 class="text-2xl font-bold text-gray-950">Premium Features</h3>
-              <ul class="mt-8 space-y-4 text-lg leading-relaxed text-gray-700">
-                <li class="flex items-center">
-                  <i
-                    class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"
-                  ></i>
-                  Three-in-One Office: A Collaborative Co-Working Space
-                </li>
-                <li class="flex items-center">
-                  <i
-                    class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"
-                  ></i>
-                  Premium Bath
-                </li>
-                <li class="flex items-center">
-                  <i
-                    class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"
-                  ></i>
-                  Fully Air Conditioned
-                </li>
-                <li class="flex items-center">
-                  <i
-                    class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"
-                  ></i>
-                  24/7 Security
-                </li>
-                <li class="flex items-center">
-                  <i
-                    class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"
-                  ></i>
-                  Power Supply
-                </li>
-
-                <li class="flex items-center">
-                  <i
-                    class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"
-                  ></i>
-                  High-Speed Internet
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <!-- <button -->
-          <button
-            type="button"
-            id="back-to-top"
-            class="fixed bottom-5 right-5 bg-blue-600 px-2 py-1 text-white"
-          >
-            <span class="mdi mdi-chevron-up text-3xl"></span>
-          </button>
-        </section>
-
-        <!-- Footer Section -->
-        <footer
-          class="mt-10 w-full bg-primary-color py-12 text-white md:mt-20 lg:whitespace-nowrap lg:text-base"
-        >
-          <div class="container mx-auto px-4 md:px-6 lg:px-10">
-            <!-- Footer Grid -->
-            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-              <!-- Social Media Section -->
-              <!-- Social Media Section -->
-              <div>
-                <h6 class="mb-4 text-lg font-semibold uppercase">Follow Us</h6>
-                <div class="flex gap-4">
-                  <a
-                    href="https://url-shortener.me/KAJ"
-                    class="text-white transition-colors hover:text-blue-500"
-                  >
-                    <i class="mdi mdi-facebook text-2xl"></i>
-                  </a>
-                </div>
-              </div>
-              <!-- Navigation Section -->
-
-              <div>
-                <h6 class="mb-4 text-lg font-semibold uppercase">Navigation</h6>
-                <ul class="space-y-2">
-                  <li>
-                    <a
-                      href="../../public/index.html"
-                      class="transition-colors hover:text-blue-500"
-                      >Home</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="../../public/pages/about.html"
-                      class="transition-colors hover:text-blue-500"
-                      >About</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="../../public/pages/services.html"
-                      class="transition-colors hover:text-blue-500"
-                      >Services</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="../../public/pages/team.html"
-                      class="transition-colors hover:text-blue-500"
-                      >Our Team</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="../../public/pages/contact.html"
-                      class="transition-colors hover:text-blue-500"
-                      >Contact</a
-                    >
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Services Section -->
-              <div>
-                <h6 class="mb-4 text-lg font-semibold uppercase">Services</h6>
-                <ul class="space-y-2">
-                  <li>
-                    <span class="transition-colors hover:text-blue-500"
-                      >Real Estate Management</span
-                    >
-                  </li>
-                  <li>
-                    <span class="transition-colors hover:text-blue-500"
-                      >Security Guards</span
-                    >
-                  </li>
-                  <li>
-                    <span class="transition-colors hover:text-blue-500"
-                      >Engineering and Consultant</span
-                    >
-                  </li>
-                  <li>
-                    <span class="transition-colors hover:text-blue-500"
-                      >Vocational School</span
-                    >
-                  </li>
-                  <li>
-                    <span class="transition-colors hover:text-blue-500"
-                      >Delivery Services</span
-                    >
-                  </li>
-                  <li>
-                    <span class="transition-colors hover:text-blue-500"
-                      >Car Rental</span
-                    >
-                  </li>
-                  <li>
-                    <span class="transition-colors hover:text-blue-500"
-                      >Travel & Shipping</span
-                    >
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Contact Section -->
-              <div>
-                <h6 class="mb-4 text-lg font-semibold uppercase">
-                  Contact Info
-                </h6>
-                <ul class="space-y-2">
-                  <li>Email: philexinternational172@gmail.com</li>
-                  <li>Phone: +231 775 4449 9753</li>
-                  <li>
-                    Website:
-                    <a
-                      href="https://www.philexinternational.com"
-                      class="transition-colors hover:text-blue-500"
-                    >
-                      www.philexinternational.com
-                    </a>
-                  </li>
-                  <li>Address: Sd Cooper Road, Monrovia, Liberia</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Copyright Section -->
-            <div
-              class="mt-12 border-t border-gray-700 pt-8 text-center md:text-start lg:text-start"
-            >
-              <p class="text-gray-400">
-                &copy; 2025 Philex. All rights reserved.
-              </p>
-            </div>
-          </div>
-        </footer>
-      </div>
-    </body>
   </head>
+
+  <body>
+    <div id="page" class="font-sans">
+      <!-- Navigation -->
+      <nav id="navbar">
+        <div
+          class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-4 md:px-6"
+        >
+          <!-- Page logo -->
+
+          <div
+            id="gtco-logo"
+            class="h-auto w-[55px] text-xl font-bold md:w-[5%]"
+          >
+            <img src="../asset/page_images/logo.jpg" alt="" />
+          </div>
+          <!-- Mobile Menu Button -->
+          <button class="lg:hidden" id="mobile-menu-button">
+            <span
+              class="mdi mdi-menu text-3xl text-black duration-500 ease-in-out"
+              id="menu-icon"
+            ></span>
+          </button>
+
+          <ul class="hidden space-x-3 md:space-x-6 lg:flex">
+            <li>
+              <a
+                href="../index.html"
+                class="nav-link text-xl font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/about.html"
+                class="nav-link text-xl font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/services.html"
+                class="nav-link text-xl font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/contact.html"
+                class="nav-link text-xl font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a
+                href="../../public/pages/gallery.html"
+                class="nav-link active text-xl font-semibold text-black transition-colors duration-500 ease-in-out hover:text-blue-950"
+                >Gallery</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          class="fixed inset-y-0 right-0 z-50 h-screen w-64 translate-x-full transform bg-white transition-transform duration-300 ease-in-out"
+          id="mobile-menu"
+        >
+          <span
+            class="mdi mdi-close absolute right-4 top-4 cursor-pointer text-3xl font-semibold"
+            id="close-menu"
+          ></span>
+          <ul class="flex flex-col space-y-2 px-4 pb-4 pt-12">
+            <li>
+              <a href="../index.html" class="block py-2 text-lg font-semibold"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/about.html"
+                class="block py-2 text-lg font-semibold"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/services.html"
+                class="block py-2 text-lg font-semibold"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/contact.html"
+                class="block py-2 text-lg font-semibold"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/gallery.html"
+                class="block py-2 text-lg font-semibold"
+                >Gallery</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section
+        class="relative flex h-[400px] items-center justify-center bg-cover bg-center text-center text-white md:h-[390px] lg:h-[85vh]"
+        style="
+          background-image: url('../../public/asset/page_images/Hero_image3.jpg');
+        "
+      >
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="z-10">
+          <h1 class="text-5xl font-semibold md:text-6xl">Gallery</h1>
+        </div>
+      </section>
+
+      <!-- This is for vip  -->
+      <section class="container mx-auto px-4 py-12 md:px-6 lg:px-10">
+        <h2 class="mb-8 text-center text-4xl font-bold text-gray-900">
+          VIP Section
+        </h2>
+
+        <div class="md:grid-cols-row grid gap-5 lg:grid-cols-2 lg:items-center">
+          <!-- Images Column -->
+          <div class="flex flex-col items-center space-y-6">
+            <div class="h-75 w-[70%] overflow-hidden rounded-full shadow-lg">
+              <img
+                src="../asset/gallery_images/vip1.jpg"
+                alt="VIP Section Interior"
+                class="object-cover"
+              />
+            </div>
+            <div class="h-75 w-[70%] overflow-hidden rounded-full shadow-lg">
+              <img
+                src="../asset/gallery_images/vip2.jpg"
+                alt="VIP Section Interior"
+                class="object-cover"
+              />
+            </div>
+            <div class="h-75 w-[70%] overflow-hidden rounded-full shadow-lg">
+              <img
+                src="../asset/gallery_images/vip3.jpg"
+                alt="VIP Section Interior"
+                class="object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Features Column is for vip frature  -->
+          <div class="rounded-lg bg-white p-8 shadow-lg">
+            <h3 class="text-2xl font-bold text-gray-950">Premium Features</h3>
+            <ul class="mt-8 space-y-4 text-lg leading-relaxed text-gray-700">
+              <li class="flex items-center">
+                <i class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"></i>
+                Premium Bath
+              </li>
+              <li class="flex items-center">
+                <i class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"></i>
+                Fully Air Conditioned
+              </li>
+              <li class="flex items-center">
+                <i class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"></i>
+                24/7 Security
+              </li>
+              <li class="flex items-center">
+                <i class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"></i>
+                Power Supply
+              </li>
+              <li class="flex items-center">
+                <i class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"></i>
+                Water System
+              </li>
+              <li class="flex items-center">
+                <i class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"></i>
+                High-Speed Internet
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- This is the ordinary  -->
+      <section class="container mx-auto px-4 py-12 md:px-6 lg:px-10">
+        <h2 class="mb-8 text-center text-4xl font-bold text-gray-900">
+          Ordinary Section
+        </h2>
+
+        <div class="grid gap-5 md:grid-cols-2 lg:items-center">
+          <!-- Images Column -->
+          <div class="flex flex-col items-center space-y-6">
+            <div class="h-75 w-[70%] overflow-hidden rounded-full shadow-lg">
+              <img
+                src="../asset/gallery_images/gallery1.jpeg"
+                alt="VIP Section Interior"
+                class="object-cover"
+              />
+            </div>
+            <div class="h-75 w-[70%] overflow-hidden rounded-full shadow-lg">
+              <img
+                src="../asset/gallery_images/gallery2.jpeg"
+                alt="VIP Section Amenities"
+                class="object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Features Column -->
+          <div class="rounded-lg bg-white p-8 shadow-lg">
+            <h3 class="text-2xl font-bold text-gray-950">Premium Features</h3>
+            <ul class="mt-8 space-y-4 text-lg leading-relaxed text-gray-700">
+              <li class="flex items-center">
+                <i class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"></i>
+                Extender Bath
+              </li>
+              <li class="flex items-center">
+                <i class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"></i>
+                Fully Air Conditioned
+              </li>
+              <li class="flex items-center">
+                <i class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"></i>
+                24/7 Security
+              </li>
+              <li class="flex items-center">
+                <i class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"></i>
+                Power Supply
+              </li>
+
+              <li class="flex items-center">
+                <i class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"></i>
+                High-Speed Internet
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- This is the ordinary  -->
+      <section class="container mx-auto px-4 py-12 md:px-6 lg:px-10">
+        <h2 class="mb-8 text-center text-4xl font-bold text-gray-900">
+          Complex Section
+        </h2>
+
+        <div class="grid gap-5 md:grid-cols-2 lg:items-center">
+          <!-- Images Column -->
+          <div class="flex flex-col items-center space-y-6">
+            <div class="h-75 w-[70%] overflow-hidden rounded-full shadow-lg">
+              <img
+                src="../asset/gallery_images/gallery5.jpeg"
+                alt="VIP Section Interior"
+                class="object-cover"
+              />
+            </div>
+          </div>
+
+          <!-- Features Column -->
+          <div class="rounded-lg bg-white p-8 shadow-lg">
+            <h3 class="text-2xl font-bold text-gray-950">Premium Features</h3>
+            <ul class="mt-8 space-y-4 text-lg leading-relaxed text-gray-700">
+              <li class="flex items-center">
+                <i class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"></i>
+                Three-in-One Office: A Collaborative Co-Working Space
+              </li>
+              <li class="flex items-center">
+                <i class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"></i>
+                Premium Bath
+              </li>
+              <li class="flex items-center">
+                <i class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"></i>
+                Fully Air Conditioned
+              </li>
+              <li class="flex items-center">
+                <i class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"></i>
+                24/7 Security
+              </li>
+              <li class="flex items-center">
+                <i class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"></i>
+                Power Supply
+              </li>
+
+              <li class="flex items-center">
+                <i class="mdi mdi-check-circle mr-3 h-6 w-6 text-blue-700"></i>
+                High-Speed Internet
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <!-- <button -->
+        <button
+          type="button"
+          id="back-to-top"
+          class="fixed bottom-5 right-5 bg-blue-600 px-2 py-1 text-white"
+        >
+          <span class="mdi mdi-chevron-up text-3xl"></span>
+        </button>
+      </section>
+
+      <!-- Footer Section -->
+      <footer
+        class="mt-10 w-full bg-primary-color py-12 text-white md:mt-20 lg:whitespace-nowrap lg:text-base"
+      >
+        <div class="container mx-auto px-4 md:px-6 lg:px-10">
+          <!-- Footer Grid -->
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <!-- Social Media Section -->
+            <!-- Social Media Section -->
+            <div>
+              <h6 class="mb-4 text-lg font-semibold uppercase">Follow Us</h6>
+              <div class="flex gap-4">
+                <a
+                  href="https://url-shortener.me/KAJ"
+                  class="text-white transition-colors hover:text-blue-500"
+                >
+                  <i class="mdi mdi-facebook text-2xl"></i>
+                </a>
+              </div>
+            </div>
+            <!-- Navigation Section -->
+
+            <div>
+              <h6 class="mb-4 text-lg font-semibold uppercase">Navigation</h6>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="../../public/index.html"
+                    class="transition-colors hover:text-blue-500"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../public/pages/about.html"
+                    class="transition-colors hover:text-blue-500"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../public/pages/services.html"
+                    class="transition-colors hover:text-blue-500"
+                    >Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../public/pages/team.html"
+                    class="transition-colors hover:text-blue-500"
+                    >Our Team</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../../public/pages/contact.html"
+                    class="transition-colors hover:text-blue-500"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Services Section -->
+            <div>
+              <h6 class="mb-4 text-lg font-semibold uppercase">Services</h6>
+              <ul class="space-y-2">
+                <li>
+                  <span class="transition-colors hover:text-blue-500"
+                    >Real Estate Management</span
+                  >
+                </li>
+                <li>
+                  <span class="transition-colors hover:text-blue-500"
+                    >Security Guards</span
+                  >
+                </li>
+                <li>
+                  <span class="transition-colors hover:text-blue-500"
+                    >Engineering and Consultant</span
+                  >
+                </li>
+                <li>
+                  <span class="transition-colors hover:text-blue-500"
+                    >Vocational School</span
+                  >
+                </li>
+                <li>
+                  <span class="transition-colors hover:text-blue-500"
+                    >Delivery Services</span
+                  >
+                </li>
+                <li>
+                  <span class="transition-colors hover:text-blue-500"
+                    >Car Rental</span
+                  >
+                </li>
+                <li>
+                  <span class="transition-colors hover:text-blue-500"
+                    >Travel & Shipping</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contact Section -->
+            <div>
+              <h6 class="mb-4 text-lg font-semibold uppercase">Contact Info</h6>
+              <ul class="space-y-2">
+                <li>Email: philexinternational172@gmail.com</li>
+                <li>Phone: +231 775 4449 9753</li>
+                <li>
+                  Website:
+                  <a
+                    href="https://www.philexinternational.com"
+                    class="transition-colors hover:text-blue-500"
+                  >
+                    www.philexinternational.com
+                  </a>
+                </li>
+                <li>Address: Sd Cooper Road, Monrovia, Liberia</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Copyright Section -->
+          <div
+            class="mt-12 border-t border-gray-700 pt-8 text-center md:text-start lg:text-start"
+          >
+            <p class="text-gray-400">
+              &copy; 2025 Philex. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
